@@ -1,0 +1,4 @@
+1. Install and start XAMPP
+2. Start Apache
+3. Put html files into C:\xampp\htdocs
+4. open browser and visit localhost.
