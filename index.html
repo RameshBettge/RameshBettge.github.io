@@ -28,6 +28,17 @@ html {
   font-size:36px; padding-top:0px; padding-top:0px; padding-left: 50%; padding-right: 50%; padding-bottom:0px;
 }
 
+.sub-nav{
+  font-size:14px;
+}
+.sub-nav-img{
+  font-size:10px;
+}
+
+.nav-img{
+  font-size:18px;
+}
+
 /*Note: Default user symbol: fa-user
         Default mail symbol: fa-envelope
 
@@ -57,9 +68,13 @@ html {
     <!-- Note: w3-text-teal changes the color of the text. It should be added to the class of the category which is currently selected. -->
     <!-- Note: to jump to a specific point on the page use <a href= "#someId" [...]></a>. The id can be given to at least the header and a div -->
 
-    <a href="#start" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-    <a href="AboutMe.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT ME</a> 
-    <a href="Resume.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-fw w3-margin-right fa-play"></i>RESUME GAME</a>
+    <a href="#start" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right nav-img"></i>PORTFOLIO</a> 
+    <div style="margin-left: 25px">
+      <div id="ProjectSubNavigation"></div>
+    </div>
+    
+    <a href="AboutMe.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right nav-img"></i>ABOUT ME</a> 
+    <a href="Resume.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-fw w3-margin-right fa-play nav-img"></i>RESUME GAME</a>
 
     <!-- Todo: Remove Default page after it is properly set up -->
     <a href="DefaultPage.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">DEFAULT for testing</a>
@@ -259,6 +274,7 @@ function DisplayProject(ProjectName)
 
   // Note: occassional error in firefox('XML-Verarbeitungsfehler: "Junk" nach Dokument-Element') may be caused by the following line.
   $('#ProjectText').load(directory + ProjectName + '.html');
+  $('#ProjectSubNavigation').load(directory + ProjectName + "_nav.html");
 }
 
 function GetHighestOverflow()
