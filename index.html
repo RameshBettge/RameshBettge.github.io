@@ -16,9 +16,9 @@ html {
 
 /* used to control the max height of the text in project grid.*/
 .limit-height{
-  max-height : 110px!important;
-  /* height: 5px!important; */
-  min-height: 110px!important;
+  max-height : 500px!important;
+  /* height: 300px!important; */
+  min-height: 0px!important;
   box-sizing:unset!important;
   size: 0px!important;
   overflow:hidden!important;
@@ -93,7 +93,6 @@ html {
     </div>
   </header>
   
-
   <!-- Note: class="w3-third w3-container w3-margin-bottom" has a nice offset below every text but sometimes causes weird gaps in the -->
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
@@ -225,6 +224,73 @@ html {
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.5.1.min.js"></script>
 <script type="text/javascript">
+
+// resize grid element's height
+
+// Todo: remove adjust height method (didn't do it already because I wanted to commit it once anyway just to be sure) 
+
+// $(document).ready(AdjustGridHeight);
+// $(window).resize(AdjustGridHeight);
+$(document).ready(GetHighestOverflow);
+$(window).resize(GetHighestOverflow);
+
+// function AdjustGridHeight()
+// {
+//   var gridTexts = document.getElementsByClassName("limit-height");
+
+//   var firstDebug = gridTexts[0];
+
+//   var uniformHeight = 0;
+
+//   for(var i = 0; i<gridTexts.length; i++)
+//   {
+//     var currentHeight = parseInt($(gridTexts).eq(i).css('height'));
+
+
+
+//     // firstDebug.innerHTML = $('limit-height').css('height');
+//     if(currentHeight > uniformHeight)
+//     {
+//       console.log("new uniform height: " + currentHeight)
+//       uniformHeight = currentHeight;
+//     }
+//     else
+//     {
+//       console.log("currentHeight "  + currentHeight + " is lower than uniform height.")
+//     }
+//   }
+
+//   for(var i = 0; i<gridTexts.length; i++)
+//   {
+//     $(gridTexts).eq(i).css('height', (uniformHeight.toString() + 'px'));
+//   }
+// }
+
+function GetHighestOverflow()
+{
+  var gridTexts = document.getElementsByClassName("limit-height");
+  
+  var highestOverflow = 0;
+
+  for(var i = 0; i<gridTexts.length; i++)
+  {
+    $(gridTexts).eq(i).css('height', ("0px")); // set height to 0
+
+    var currentOverflow = gridTexts[i].scrollHeight - gridTexts[i].clientHeight;
+
+    if(currentOverflow > highestOverflow)
+    {
+      highestOverflow = currentOverflow
+      console.log(highestOverflow.toString());
+    }
+  }
+
+    for(var i = 0; i<gridTexts.length; i++)
+  {
+    $(gridTexts).eq(i).css('height', (highestOverflow.toString() + 'px'));
+  }
+}
+
 // Switch project Content
 function DisplayDummy()
 {
