@@ -1,0 +1,67 @@
+<br>
+<h2>AR Traps</h2>
+<br>
+
+<h3 id = "overview">Overview</h3>
+<p>
+At the October Berlin Minijam I wanted to try something completely new to me. After talking to some people I knew from other Jams and some new faces I quickly found myself in a team which wanted to do something in AR.
+We needed a lot of time to agree on a Game Design. 
+<br> 
+The difficulty we had was, that most of our ideas were too ambitious. After losing nearly half of our team we hurried up and tried to at least get something working. 
+We decided to spawn virtual traps into the real world. The player has to reach the other end of the room without getting hit.
+<br> <br>
+</p>
+
+<div style = "text-align: center;">
+    <img src="Images/Demos/SizedPlaceholder.png" style = " width:50%; height: 50%">
+</div>
+<br> <br>
+
+<h3 id="howWeDidIt">How we did it</h3>
+<p>
+Since two of us were somewhat experienced with AR they worked on the implementation of the Vuforia framework. We used an image target - a specific image we printed out and laid on the floor. As soon as the program recognizes the image it can project the 3D Models into the real space. A system called 'extended tracking' enabled us to keep the location of the Models accurate even after the image target is out of view.
+
+My task was to design and programm all of the traps. I wrote three scripts to move the traps in different ways. Since we weren't sure whether or not we would have time to build on top of the current minimalistic concept, I decided to write one script in a very versatile way. 
+
+We could've used it for various things, but due to time constraints, we only used it for the two walls trying to crush the player in between themselves.
+<br> <br>
+</p>
+<h3 id="additionalTraps">Addition Traps</h3>
+
+<p>
+
+To prove that my scripts could be used in different ways, I quickly created the following example traps:
+
+FloorBlades
+FloorBlades
+Flying Spears
+Flying Spears
+SpinningBlades2
+SpinningBlades2
+
+
+I created a shader to hide the blades (shown on the left) if they are below a certain point. Now they can be used in AR :)
+
+
+
+Github:
+
+https://github.com/RameshBettge/AR_Floor
+
+
+
+Tools used:
+
+Vuforia
+
+Dungeon Traps Assets (https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-traps-50655)
+</p>    
+
+ 
+
+ 
+
+ 
+
+ 
+

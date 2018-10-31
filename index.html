@@ -31,8 +31,9 @@ html {
 .sub-nav{
   font-size:14px;
 }
-.sub-nav-img{
+.sub-nav-img:after{
   font-size:10px;
+  content: '\f0c8'
 }
 
 .nav-img{
@@ -179,7 +180,9 @@ html {
 
     <div class="Team">
       <div class="w3-third w3-container w3-margin-top">
-        <img src="Images/Demos/SizedPlaceholder.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <a onclick="DisplayProject('ARTraps')" href = "#ProjectContainer">
+          <img src="Images/Demos/SizedPlaceholder.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        </a>
         <div class="w3-container w3-white">
           <div class ="limit-height">
             <p><b>AR Traps</b></p>
@@ -220,8 +223,10 @@ html {
         <p class="fa fa-angle-up myArrow"></p>
       </a>
       <div class="w3-bottombar" style="padding-bottom: 0px"></div>
-      <div id="ProjectText">
-        <!-- Project Content is placed here.-->
+      <div style="padding-left:5%; padding-right: 5%">
+        <div id="ProjectText">
+          <!-- Project Content is placed here.-->
+        </div>
       </div>
       <a href="#ProjectContainer"> <!-- Note: maybe linking to #start is nicer. -->
           <p class="fa fa-angle-up myArrow"></p>
