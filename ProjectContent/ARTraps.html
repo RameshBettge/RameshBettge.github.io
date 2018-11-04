@@ -1,11 +1,11 @@
 <style>
-    #video_overlays
+    .overlays
     {
         position:absolute;
 
         z-index:300000;
 
-        pointer-events: none;
+        pointer-events: none; 
     }
 </style>
 
@@ -28,10 +28,17 @@ We decided to spawn virtual traps into the real world. The player has to reach t
 <!-- <div style = "text-align: center;">
     <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
 </div> -->
-<div style="margin-left:40%">
-        <div id="video_overlays"><i class="fa fa-fw fa-play" style="font-size:120px; color:white; margin-top:50%; margin-left: 20%;"></i></div>
-        <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%;"></video>
-</div>
+
+
+<button onclick="SetMiddlePosition()">TEST</button>
+<br>
+
+    <div class="overlays"><i id="vid1_o" class="fa fa-fw fa-play" style="font-size:120px; color:white;"></i></div>
+        <video class="videos" id="vid1" onclick="SwitchPlay('vid1');" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%;"></video>
+<br>
+        <div class="overlays"><i id="vid2_o" class="fa fa-fw fa-play" style="font-size:120px; color:white;"></i></div>
+        <video class="videos" id="vid2" onclick="SwitchPlay('vid1');" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:35%; height: 25%;"></video>
+
 
             
 
@@ -79,8 +86,10 @@ Dungeon Traps Assets (https://assetstore.unity.com/packages/3d/environments/dung
 </p>    
 
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.5.1.min.js"></script>
 <script>
-        var isPlaying = {};
+
+    var isPlaying = {};
 
 
     function SwitchPlay(name)
@@ -96,7 +105,49 @@ Dungeon Traps Assets (https://assetstore.unity.com/packages/3d/environments/dung
             vid.pause();
             isPlaying[vid] = false;
         }
+    }
 
+    function SetMiddlePosition() //  unfunctional!
+    {
+        // var vid = document.getElementById(name);
+        // var play = document.getElementById(name + "_o");
+
+        console.log("setting middle pos");
+
+        var vids = document.getElementsByClassName("videos");
+        var plays = document.getElementsByClassName("overlays");
+
+        for(var i = 0; i < vids.length; i++)
+        {
+            var vid = vids[i];
+            var play = plays[i];
+
+            console.log(vid.id);
+
+            // Calculate X Offset
+            var width = parseFloat( $(vid).css('width') );
+            console.log("vid: " + width);
+            var width = width * 0.5;
+            var playWidth = parseFloat( $(play).css('width') );
+            console.log("play: " + playWidth);
+            width = width - (playWidth * 0.5);
+            console.log("offset: " + width)
+            var xOffset = parseFloat(width)/2 + 'px';
+
+            // Calculate Y Offset
+            var height = parseFloat( $(vid).css('height') );
+            var height = height * 0.5;
+            var playheight = parseFloat( $(play).css('height') );
+            height = height - (playheight * 0.5);
+            var yOffset = height/2 + 'px';
+
+
+            // Apply Offsets
+            $(play).css('margin-left', xOffset);
+            $(play).css('margin-top', yOffset);
+
+            console.log(xOffset);
+        }
     }
 
 </script>
