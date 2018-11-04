@@ -1,3 +1,13 @@
+<style>
+#video_overlays {
+        position:absolute;
+    
+            width:640px;
+            min-height:370px;
+            z-index:300000;
+        }</style>
+
+
 <br>
 <h2>AR Traps    <i style ="font-size: 75%">-    October Berlin Minijam</i></h2>
 <br>
@@ -16,6 +26,16 @@ We decided to spawn virtual traps into the real world. The player has to reach t
 <div style = "text-align: center;">
     <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
 </div>
+
+
+<div id="video_box" style = "margin:0 auto">
+    <div id="video_overlays"><p style="font-size: 40px; color:white">I'M OVERLAY!</p></div>
+    <div>
+    <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
+    </div>
+</div>
+            
+
 <br>
 <br> <br>
 
