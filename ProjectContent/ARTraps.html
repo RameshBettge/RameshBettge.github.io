@@ -1,9 +1,10 @@
 <br>
-<h2>AR Traps</h2>
+<h2>AR Traps    <i style ="font-size: 75%">-    October Berlin Minijam</i></h2>
 <br>
 <h1 style="color:red">Not properly implemented!</h1>
 <h3>Overview</h3>
 <p>
+An AR Evperienced made in about four hours! We were given 8 hours of time but some 
 At the October Berlin Minijam I wanted to try something completely new to me. After talking to some people I knew from other Jams and some new faces I quickly found myself in a team which wanted to do something in AR.
 We needed a lot of time to agree on a Game Design. 
 <br> 
@@ -13,8 +14,9 @@ We decided to spawn virtual traps into the real world. The player has to reach t
 </p>
 
 <div style = "text-align: center;">
-    <img src="Images/Demos/SizedPlaceholder.png" style = " width:50%; height: 50%">
+    <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
 </div>
+<br>
 <br> <br>
 
 <h3 id="howWeDidIt">How we did it</h3>
@@ -56,3 +58,26 @@ Vuforia
 
 Dungeon Traps Assets (https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-traps-50655)
 </p>    
+
+
+<script>
+        var isPlaying = {};
+
+
+    function SwitchPlay(name)
+    {
+        var vid = document.getElementById(name);
+        if(!isPlaying[vid] || vid.ended)
+        {
+            vid.play();    
+            isPlaying[vid] = true;
+        }
+        else
+        {
+            vid.pause();
+            isPlaying[vid] = false;
+        }
+
+    }
+
+</script>
