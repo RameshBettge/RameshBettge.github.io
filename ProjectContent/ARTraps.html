@@ -1,11 +1,13 @@
 <style>
-#video_overlays {
+    #video_overlays
+    {
         position:absolute;
-    
-            width:640px;
-            min-height:370px;
-            z-index:300000;
-        }</style>
+
+        z-index:300000;
+
+        pointer-events: none;
+    }
+</style>
 
 
 <br>
@@ -23,17 +25,14 @@ We decided to spawn virtual traps into the real world. The player has to reach t
 <br> <br>
 </p>
 
-<div style = "text-align: center;">
+<!-- <div style = "text-align: center;">
     <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
+</div> -->
+<div style="margin-left:40%">
+        <div id="video_overlays"><i class="fa fa-fw fa-play" style="font-size:120px; color:white; margin-top:50%; margin-left: 20%;"></i></div>
+        <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%;"></video>
 </div>
 
-
-<div id="video_box" style = "margin:0 auto">
-    <div id="video_overlays"><p style="font-size: 40px; color:white">I'M OVERLAY!</p></div>
-    <div>
-    <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
-    </div>
-</div>
             
 
 <br>
