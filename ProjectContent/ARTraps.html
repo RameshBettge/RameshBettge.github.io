@@ -1,6 +1,4 @@
-<style>
 
-</style>
 
 
 <br>
@@ -17,11 +15,6 @@ The difficulty we had was, that most of our ideas were too ambitious. After losi
 We decided to spawn virtual traps into the real world. The player has to reach the other end of the room without getting hit.
 <br> <br> <br>
 </p>
-
-<!-- <div style = "text-align: center;">
-    <video id="vid1" onclick="TogglePlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
-</div> -->
-
 
 <div style="padding-left: 30%">
     <div class="overlays"><i id="vid1_o" class="fa fa-fw fa-play vid-play"></i></div>
@@ -47,34 +40,59 @@ My task was to design and programm all of the traps. I wrote three scripts to mo
 We could've used it for various things, but due to time constraints, we only used it for the two walls trying to crush the player in between themselves.
 <br> <br>
 </p>
-<h3 id="additionalTraps">Addition Traps</h3>
+<h3 id="additionalTraps">Additional Traps</h3>
 
 <p>
 
-To prove that my scripts could be used in different ways, I quickly created the following example traps:
-
-FloorBlades
-FloorBlades
-Flying Spears
-Flying Spears
-SpinningBlades2
-SpinningBlades2
-
-
+To prove that my scripts could be used in different ways, I quickly created the following example traps. <br>
 I created a shader to hide the blades (shown on the left) if they are below a certain point. Now they can be used in AR :)
 
+<!-- Todo: Exchange these placeholder videos with the actual content. -->
+<br>
+    <div class="mar-top; mat-bottom;" style="height:240px; margin-left:10%; margin-right:10%">
+        <div class="w3-third w3-container mar-top mar-bottom">
+            <div class="overlays"><i id="vid4_o" class="fa fa-fw fa-play vid-play-small"></i></div>
+            <video  
+                class="videos" style="width:40%; height:40%;" id="vid4" 
+                onclick="TogglePlay('vid4');"  onplay="ShowPlay('vid4', false)" onpause="ShowPlay('vid4', true)" onended="ShowPlay('vid4', true); Reset('vid4')" 
+                type="video/x-webm" src="Media/ARTraps/ARPersia.webm">
+            </video>
+        </div>
+        <div class="w3-third w3-container mar-top mar-bottom">
+            <div class="overlays"><i id="vid5_o" class="fa fa-fw fa-play vid-play-small"></i></div>
+            <video  
+                class="videos" style="width:40%; height:40%;" id="vid5" 
+                onclick="TogglePlay('vid5');"  onplay="ShowPlay('vid5', false)" onpause="ShowPlay('vid5', true)" onended="ShowPlay('vid5', true); Reset('vid5')" 
+                type="video/x-webm" src="Media/ARTraps/ARPersia.webm">
+            </video>
+        </div>
 
+        <div class="w3-third w3-container mar-top mar-bottom">
+            <div class="overlays"><i id="vid6_o" class="fa fa-fw fa-play vid-play-small"></i></div>
+            <video  
+                class="videos" style="width:40%; height:40%;" id="vid6" 
+                onclick="TogglePlay('vid6');"  onplay="ShowPlay('vid6', false)" onpause="ShowPlay('vid6', true)" onended="ShowPlay('vid6', true); Reset('vid6')" 
+                type="video/x-webm" src="Media/ARTraps/ARPersia.webm">
+            </video>
+        </div>
+   
+    </div>
+    <br>
 
-Github:
+    <a href="https://github.com/RameshBettge/AR_Floor">
+        <div class ="w3-container git-container" > 
+            <p class="git" >View Github Repository</p>
+        </div>
+    </a>
 
-https://github.com/RameshBettge/AR_Floor
+    <p class="tool-head"><b>Tools used:</b></p>
+    <a href="https://developer.vuforia.com/">
+            <p class="tool">Vuforia</p>
+    </a>
+    <a href="https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-traps-50655">
+            <p class="tool">Dungeon Traps (only models)</p>
+    </a>
 
-
-
-Tools used:
-
-Vuforia
-
-Dungeon Traps Assets (https://assetstore.unity.com/packages/3d/environments/dungeons/dungeon-traps-50655)
+    
 </p>    
 
