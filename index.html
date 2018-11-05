@@ -317,6 +317,8 @@ html {
 </div>
 <!-- End page content -->
 
+
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.5.1.min.js"></script>
 <script type="text/javascript">
 
@@ -325,6 +327,52 @@ html {
 // resize grid element's height
 $(document).ready(GetHighestOverflow);
 $(window).resize(GetHighestOverflow);
+
+
+// Video Controls
+function TogglePlay(name)
+{
+    var vid = document.getElementById(name);
+    play = document.getElementById(name + "_o");
+
+    if(!isPlaying[vid] || vid.ended)
+    {
+        vid.play();
+        isPlaying[vid] = true;
+        // play.style.display = "none";
+    }
+    else
+    {
+        vid.pause();
+        isPlaying[vid] = false;
+        // play.style.display = "block";
+    }
+
+        vid.controls = true;
+}
+
+function ShowPlay(name, on)
+{
+    var vid = document.getElementById(name);
+
+    var play = document.getElementById(name + "_o");
+
+    if(on)
+    {
+        play.style.display = "block";
+    }
+    else
+    {
+        play.style.display = "none";
+    }
+}
+function Reset(name)
+{
+    var vid = document.getElementById(name);
+    vid.currentTime = 0;
+}
+
+
 
 // Switch project Content
 function DisplayProject(ProjectName)

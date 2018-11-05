@@ -19,13 +19,17 @@ We decided to spawn virtual traps into the real world. The player has to reach t
 </p>
 
 <!-- <div style = "text-align: center;">
-    <video id="vid1" onclick="SwitchPlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
+    <video id="vid1" onclick="TogglePlay('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%"></video>
 </div> -->
 
 
 <div style="padding-left: 30%">
     <div class="overlays"><i id="vid1_o" class="fa fa-fw fa-play vid-play"></i></div>
-    <video class="videos" id="vid1" onclick="SwitchPlay('vid1');" onended="ShowPlaySymbol('vid1', true)" onplay="ShowPlaySymbol('vid1', false)" type="video/x-webm" src="Media/ARTraps/ARPersia.webm" style = " width:40%; height: 40%;"></video>
+    <video  
+        class="videos" style="width:40%; height:40%;" id="vid1" 
+        onclick="TogglePlay('vid1');"  onplay="ShowPlay('vid1', false)" onpause="ShowPlay('vid1', true)" onended="ShowPlay('vid1', true); Reset('vid1')" 
+        type="video/x-webm" src="Media/ARTraps/ARPersia.webm">
+    </video>
 </div>
 
 
@@ -81,43 +85,3 @@ Dungeon Traps Assets (https://assetstore.unity.com/packages/3d/environments/dung
     var isPlaying = {};
 
 
-    function SwitchPlay(name)
-    {
-        var vid = document.getElementById(name);
-        play = document.getElementById(name + "_o");
-
-        if(!isPlaying[vid] || vid.ended)
-        {
-            console.log("play");
-            
-            vid.play();
-            isPlaying[vid] = true;
-            play.style.display = "none";
-        }
-        else
-        {
-            vid.pause();
-            isPlaying[vid] = false;
-            play.style.display = "block";
-        }
-
-            vid.controls = true;
-    }
-
-    function ShowPlaySymbol(name, on)
-    {
-        var vid = document.getElementById(name);
-
-        var play = document.getElementById(name + "_o");
-
-        if(on)
-        {
-            play.style.display = "block";
-        }
-        else
-        {
-            play.style.display = "none";
-        }
-    }
-
-</script>
