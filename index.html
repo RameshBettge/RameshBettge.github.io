@@ -14,6 +14,22 @@ html {
     overflow-y: scroll; 
 }
 
+/* used to display the 'play' symbol on top of videos. */
+.overlays
+{
+    position:absolute;
+
+    z-index:300000;
+
+    pointer-events: none; 
+}
+.vid-play
+{
+  font-size: 120px;
+  color: white;
+  text-shadow:  0 0 5px black;
+}
+
 /* used to control the max height of the text in project grid.*/
 .limit-height{
   max-height : 500px!important;

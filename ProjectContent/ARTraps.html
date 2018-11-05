@@ -1,12 +1,5 @@
 <style>
-    .overlays
-    {
-        position:absolute;
 
-        z-index:300000;
-
-        pointer-events: none; 
-    }
 </style>
 
 
@@ -22,7 +15,7 @@ We needed a lot of time to agree on a Game Design.
 <br> 
 The difficulty we had was, that most of our ideas were too ambitious. After losing nearly half of our team we hurried up and tried to at least get something working. 
 We decided to spawn virtual traps into the real world. The player has to reach the other end of the room without getting hit.
-<br> <br>
+<br> <br> <br>
 </p>
 
 <!-- <div style = "text-align: center;">
@@ -30,14 +23,10 @@ We decided to spawn virtual traps into the real world. The player has to reach t
 </div> -->
 
 
-<button onclick="SetMiddlePosition()">TEST</button>
-<br>
-
-    <div class="overlays"><i id="vid1_o" class="fa fa-fw fa-play" style="font-size:120px; color:white;"></i></div>
-        <video class="videos" id="vid1" onclick="SwitchPlay('vid1');" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:25%; height: 25%;"></video>
-<br>
-        <div class="overlays"><i id="vid2_o" class="fa fa-fw fa-play" style="font-size:120px; color:white;"></i></div>
-        <video class="videos" id="vid2" onclick="SwitchPlay('vid1');" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:35%; height: 25%;"></video>
+<div style="padding-left: 30%">
+    <div class="overlays"><i id="vid1_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video class="videos" id="vid1" onclick="SwitchPlay('vid1');" onended="ShowPlaySymbol('vid1')" type="video/x-webm" src="Media/ARTraps/ARPERSIA.webm" style = " width:50%; height: 50%;"></video>
+</div>
 
 
             
@@ -95,59 +84,29 @@ Dungeon Traps Assets (https://assetstore.unity.com/packages/3d/environments/dung
     function SwitchPlay(name)
     {
         var vid = document.getElementById(name);
+        play = document.getElementById(name + "_o");
+
         if(!isPlaying[vid] || vid.ended)
         {
-            vid.play();    
+            vid.play();
             isPlaying[vid] = true;
+            play.style.display = "none";
         }
         else
         {
             vid.pause();
             isPlaying[vid] = false;
+            play.style.display = "block";
         }
     }
 
-    function SetMiddlePosition() //  unfunctional!
+    function ShowPlaySymbol(name)
     {
-        // var vid = document.getElementById(name);
-        // var play = document.getElementById(name + "_o");
+        var vid = document.getElementById(name);
+        vid.currentTime = 0;
 
-        console.log("setting middle pos");
-
-        var vids = document.getElementsByClassName("videos");
-        var plays = document.getElementsByClassName("overlays");
-
-        for(var i = 0; i < vids.length; i++)
-        {
-            var vid = vids[i];
-            var play = plays[i];
-
-            console.log(vid.id);
-
-            // Calculate X Offset
-            var width = parseFloat( $(vid).css('width') );
-            console.log("vid: " + width);
-            var width = width * 0.5;
-            var playWidth = parseFloat( $(play).css('width') );
-            console.log("play: " + playWidth);
-            width = width - (playWidth * 0.5);
-            console.log("offset: " + width)
-            var xOffset = parseFloat(width)/2 + 'px';
-
-            // Calculate Y Offset
-            var height = parseFloat( $(vid).css('height') );
-            var height = height * 0.5;
-            var playheight = parseFloat( $(play).css('height') );
-            height = height - (playheight * 0.5);
-            var yOffset = height/2 + 'px';
-
-
-            // Apply Offsets
-            $(play).css('margin-left', xOffset);
-            $(play).css('margin-top', yOffset);
-
-            console.log(xOffset);
-        }
+        var play = document.getElementById(name + "_o");
+        play.style.display = "block";
     }
 
 </script>
