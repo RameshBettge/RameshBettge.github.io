@@ -15,7 +15,7 @@
 <div class="mar-top; mar-bottom"style="padding-left: 30%">
     <div class="overlays"><i id="arFP_o" class="fa fa-fw fa-play vid-play"></i></div>
     <video  
-        class="video" style="width:40%; height:40%;" id="arFP" 
+        class="video" style="width:30%; height:30%;" id="arFP" 
         onclick="TogglePlay('arFP');"  onplay="ShowPlay('arFP', false)" onpause="ShowPlay('arFP', true)" onended="ShowPlay('arFP', true); Reset('arFP')" 
         type="video/x-webm" src="Media/ARTraps/ARPersia.webm">
     </video>
@@ -28,13 +28,15 @@
 <p>
     When I was looking for a team that evening I was sure, I wanted to do something new. Luckily I met someone I worked with at the VRBLN Hackathon#2.
     He had often worked with AR before, so it was his task to get the tracking and movement working. 
-    For that, we used Vuforia and a technique called 'extended tracking'. 
-    <br> <br>
+    For that, we used Vuforia and a technique called 'extended tracking'. <br>
     A piece of paper with a specific image on it is laid down on the floor and when the program recognizes it, it constructs the virtual world around it.
     It then uses the environment for orientation which makes it possible to keep the virtual world's position even when moving and when the tracker is out of view.
     <br> <br>
     My task was to design and implement all of the traps. At first, our team had difficulties deciding on a concept. Therefore I tried to make my scripts as versatile as possible.
     When we fully committed to a concept we had only a few hours left. Despite the time constraints we got at least three traps to work, each using a different script.
+    In the following video, you can see how well our game works. A phone is connected to a laptop which projects our game on the wall (right-hand side).
+    At the start, I point the phone to the tracker, which is lying on the floor (barely visible here).
+    Even though I made a mistake and had to stop abruptly the tracking still worked!
     
     
     
@@ -42,7 +44,15 @@
     
 </p>
 
-<!-- Todo: add the video in which I am seen running while the game view is projected on the wall -->
+<div class="mar-top; mar-bottom"style="padding-left: 20%">
+    <div class="overlays"><i id="arPres_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video" style="width:60%; height:60%;" id="arPres" 
+        onclick="TogglePlay('arPres');"  onplay="ShowPlay('arPres', false)" onpause="ShowPlay('arPres', true)" onended="ShowPlay('arPres', true); Reset('arPres')" 
+        type="video/x-webm" src="Media/ARTraps/ARPresentation.webm">
+    </video>
+</div>
+
 
 <h3 id="additionalTraps">Additional Traps</h3>
 
