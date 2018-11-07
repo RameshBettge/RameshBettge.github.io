@@ -1,41 +1,99 @@
-<h1>Unity Shaders</h1>
-<h1 style="color:red">Not implemented!</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>end.</p>
+<br>
+<h1 class="proj-h1" style="text-align:center">Portal Shader<br>
+    <i class="proj-sub1">September 2018</i>
+</h1>
+<br>
 
+<h3>Overview</h3>
+
+<div class="mar-top; mar-bottom"style="padding-left: 10%">
+        <div class="overlays"><i id="Crystal_o" class="fa fa-fw fa-play vid-play"></i></div>
+        <video  
+        class="video" style="width:80%; height:80%;" id="Crystal" 
+        onclick="TogglePlay('Crystal');"  onplay="ShowPlay('Crystal', false)" onpause="ShowPlay('Crystal', true)" onended="ShowPlay('Crystal', true); Reset('Crystal')" 
+        type="video/x-webm" src="Media/Shaders/Crystal.webm">
+    </video>
+</div>
+
+<p>
+    After two weeks of learning about shaders, this ended up being my favorite experiment.
+    It is a visual portal which shows a completely different area when active.
+    First I will show a few other shaders, and then explain, how the crystal works.
 </p>
+
+<br><br>
+
+<h3 id="howItWorks">How it works</h3>
+
+<p>
+    After learning how to create simple lit and even simpler unlit shaders, I heard about the Z-Buffer.
+    My first idea was to use it in an unconventional way to create a portal effect. <br>
+    First I rendered the output of a secondary camera on the screen without writing to the Z-Buffer.<br>
+    Then geometry is rendered front-to-back as always. 
+    <br> 
+    The crystal is treated like normal geometry and also writes to the Z-Buffer, even if it is transparent.
+    This basically leaves a gap in the actual geometry through which the other world can be seen.
+</p>
+
+<div class="mar-top; mar-bottom"style="padding-left: 15%">
+    <div class="overlays"><i id="scannerHowTo_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video" style="width:70%; height:70%;" id="scannerHowTo" 
+        onclick="TogglePlay('scannerHowTo');"  onplay="ShowPlay('scannerHowTo', false)" onpause="ShowPlay('scannerHowTo', true)" onended="ShowPlay('scannerHowTo', true); Reset('scannerHowTo')" 
+        type="video/x-webm" src="Media/Shaders/ScannerHowTo.webm">
+    </video>
+</div>
+
+
+<!-- Todo: shorten this section since it is supposed to just be an addition. -->
+<h3 id="flashlightPortal">Flashlight Portal (Extra)</h3>
+<p>
+    Since the portal effect turned out pretty well, I decided to build a small game using this effect.
+    The player has a flashlight or lantern which casts light in a cone. Wherever the light hits, the portal effect should be displayed. <br>
+    The player should be able to walk through big portals and put objects through small ones.
+    To make this possible I wanted to procedurally generate meshes. Whenever the player sets down the flashlight the portals get active - a hitbox is generated.
+</p>
+
+<div class="mar-top; mar-bottom"style="padding-left: 15%">
+    <div class="overlays"><i id="flashlight_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video" style="width:70%; height:70%;" id="flashlight" 
+        onclick="TogglePlay('flashlight');"  onplay="ShowPlay('flashlight', false)" onpause="ShowPlay('flashlight', true)" onended="ShowPlay('flashlight', true); Reset('flashlight')" 
+        type="video/x-webm" src="Media/Shaders/FlashlightPortal.webm">
+    </video>
+</div>
+
+<p>
+    In the following video, you can see how that rays are cast in a cone shape and if they hit an object, a vertex is generated.
+    The vertices snap to edges if they are very close, but gaps still occur because normally more rays are used.
+    Meshed are separated by object hit and by the hit-normal.
+</p>
+
+<div class="mar-top; mar-bottom"style="padding-left: 5%">
+    <div class="overlays"><i id="flashlightDebug_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video" style="width:100%; height:100%;" id="flashlightDebug" 
+        onclick="TogglePlay('flashlightDebug');"  onplay="ShowPlay('flashlightDebug', false)" onpause="ShowPlay('flashlightDebug', true)" onended="ShowPlay('flashlightDebug', true); Reset('flashlightDebug')" 
+        type="video/x-webm" src="Media/Shaders/FlashlightDebug.webm">
+    </video>
+</div>
+
+<p>
+    Unfortunately making this work in various edge cases took a lot of time and it still doesn't work consistently.
+    That's why the project is currently on ice.
+</p>
+    
+<div>
+    <a href="https://github.com/RameshBettge/First-Shaders">
+        <div class ="w3-container git-container" > 
+            <p class="git" >View Github Repository (Shaders)</p>
+        </div>
+    </a>
+
+
+    <a href="https://github.com/RameshBettge/FlashlightPortal">
+        <div class ="w3-container git-container" > 
+            <p class="git" >View Github Repository (Flashlight)</p>
+        </div>
+    </a>
+</div>
