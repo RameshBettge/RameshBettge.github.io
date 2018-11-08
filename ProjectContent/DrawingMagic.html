@@ -11,6 +11,8 @@
 
 <h1>Drawing Magic</h1>
 
+<h3>Overview</h3>
+
 <p> 
     This project is my midterm exam and it has multiple things to offer. Much on the programming side but also a little bit of art.
     There are two main aspects of the game. The first is an adorable blob which follows you around and might even prove useful.
@@ -88,9 +90,7 @@
     Even after the movement controls were completed, the gameplay concept was pretty rough. It was supposed to be a platformer with gravity similar to Mario Galaxy. 
     The blob would grow when eating things and shrink when being bitten by enemies. Eventually, he would be able to swallow the level and fall onto another planet.
     Instead of implementing this, I had a completely different idea. In order to somehow recycle what I did so far, I made the blob an NPC and developed a simple 'pathfinder'.
-</p>
 <br><br>
-<p>
     Transforms marked with a gem symbol are saved in an array. Some of them are marked as key-points (here they are yellow). 
     The blob will always move to the key-point which is closest to the player (black capsule).
     He will not move directly to it, however, but always move from one point in the array to the next, until he has reached his destination.
@@ -133,8 +133,16 @@
     A fireball would be created!
 </p>
 
+
+
+
 <img src="Media/DrawingMagic/SpellCircle.png" class="myImg">
     <br>
+
+    <p class="tool-head"><b>Resource used:</b></p>
+    <a href="https://catlikecoding.com/unity/tutorials/mesh-deformation/">
+            <p class="tool">Catlike Coding on Mesh Deformation</p>
+    </a>
 
     <div>
         <a href="https://bitbucket.org/gongfumaniac/drawingmagic/src/master/">
