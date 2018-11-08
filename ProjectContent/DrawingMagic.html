@@ -1,6 +1,82 @@
+
+<style>
+    .draw-vid
+    {
+        width:75%; 
+        height:75%;
+    }
+</style>
+
 <h1>Drawing Magic</h1>
 <h1 style="color:red">Under Construction!!</h1>
 
+<p> 
+    This project is my midterm exam and it has multiple things to offer. Much on the programming side but also a little bit of art.
+    There are two main aspects of the game. The first is an adorable blob which follows you around and might even prove useful.
+</p>
+<br>
+<p style="text-align: center">
+    <b>Spoiler Alert!</b> The following video demonstrates the solution to a puzzle.
+</p>
+<div class="mar-top; mar-bottom"style="padding-left: 20%">
+    <div class="overlays"><i id="key_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video draw-vid" id="key" 
+        onclick="TogglePlay('key');"  onplay="ShowPlay('key', false)" onpause="ShowPlay('key', true)" onended="ShowPlay('key', true); Reset('key')" 
+        type="video/x-webm" src="Media/DrawingMagic/FetchKey.webm">
+    </video>
+</div>
+
+
+<p>
+    The second aspect of the game is the ability to draw magic lines into the air. 
+    Currently that's all, but I have created an idea on how to use machine learning to recognize symbols which could be combined for powerful spells.
+</p>
+<div class="mar-top; mar-bottom"style="padding-left: 20%">
+    <div class="overlays"><i id="drawVid_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video draw-vid" id="drawVid" 
+        onclick="TogglePlay('drawVid');"  onplay="ShowPlay('drawVid', false)" onpause="ShowPlay('drawVid', true)" onended="ShowPlay('drawVid', true); Reset('drawVid')" 
+        type="video/x-webm" src="Media/DrawingMagic/Drawing.webm">
+    </video>
+</div>
+
+<h3 id="fauxSoftbody"> The Faux Softbody</h3>
+
+<div class="mar-top; mar-bottom"style="padding-left: 20%">
+    <div class="overlays"><i id="softbody_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video draw-vid" id="softbody" 
+        onclick="TogglePlay('softbody');"  onplay="ShowPlay('softbody', false)" onpause="ShowPlay('softbody', true)" onended="ShowPlay('softbody', true); Reset('softbody')" 
+        type="video/x-webm" src="Media/DrawingMagic/SoftbodyTesting.webm">
+    </video>    
+</div>
+
+<div class="mar-top; mar-bottom"style="padding-left: 20%">
+    <div class="overlays"><i id="blob_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video draw-vid" id="blob" 
+        onclick="TogglePlay('blob');"  onplay="ShowPlay('blob', false)" onpause="ShowPlay('blob', true)" onended="ShowPlay('blob', true); Reset('blob')" 
+        type="video/x-webm" src="Media/DrawingMagic/BlobPlayer.webm">
+    </video>
+</div>
+
+<h3 id="pathfinding">Custom 'Pathfinding'</h3>
+
+<div class="mar-top; mar-bottom"style="padding-left: 20%">
+    <div class="overlays"><i id="path_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video draw-vid" id="path" 
+        onclick="TogglePlay('path');"  onplay="ShowPlay('path', false)" onpause="ShowPlay('path', true)" onended="ShowPlay('path', true); Reset('path')" 
+        type="video/x-webm" src="Media/DrawingMagic/Pathfinding.webm">
+    </video>
+</div>
+
+<h3 id="draw">Drawing</h3>
+
+<img src="Media/DrawingMagic/SpellCircle.png" class="myImg">
+<img src="Media/DrawingMagic/NormalCam.PNG" class="myImg">
+<img src="Media/DrawingMagic/NeuralCam.PNG" class="myImg">
     <br>
     <br>
     <br>

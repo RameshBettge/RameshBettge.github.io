@@ -10,23 +10,28 @@ var isPlaying = {};
 
 function TogglePlay(name)
 {
-    var vid = document.getElementById(name);
-    play = document.getElementById(name + "_o");
-
-    if(!isPlaying[vid] || vid.ended)
-    {
-        vid.play();
-        isPlaying[vid] = true;
-        // play.style.display = "none";
-    }
-    else
-    {
-        vid.pause();
-        isPlaying[vid] = false;
-        // play.style.display = "block";
-    }
-
+  
+  var vid = document.getElementById(name);
+  play = document.getElementById(name + "_o");
+  
+  if(!vid.controls)
+  {
     vid.controls = true;
+  }
+
+  if(!isPlaying[vid] || vid.ended)
+  {
+      vid.play();
+      isPlaying[vid] = true;
+      // play.style.display = "none";
+  }
+  else
+  {
+      vid.pause();
+      isPlaying[vid] = false;
+      // play.style.display = "block";
+  }
+
 }
 
 function ShowPlay(name, on)
