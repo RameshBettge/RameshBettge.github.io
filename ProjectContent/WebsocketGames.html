@@ -1,0 +1,96 @@
+<h1 class="proj-h1" style="text-align:center">Websocket Games<br>
+    <i class="proj-sub1">August & September Berlin Minijams</i>
+</h1>
+<h1 style="color:red">Under Construction!</h1>
+
+<h3>Overview</h3>
+
+<p>
+    Two games made on two different GameJams but using the same websocket technology. 
+    One PC has to start the Game and everyone can join in just by visiting the PC's IP. <br>
+    No App required!
+    <br><br>
+    Using <a href = "https://github.com/floatinghotpot/socket.io-unity" class="link">Socket.IO</a>, 
+    <a href="https://docs.docker.com/" class="link">Docker</a>, 
+    a server written by my team member <a href="https://github.com/DanShu93" class="link">Daniel</a> years ago,
+    and an old javascript-controller made this possible.<br>
+    The controller's data (id, Vector2, and dis/connection events) is stringified with JSON and send over the server to the Unity application.
+    This data is then destringified and processed.
+</p>
+
+<h3 id="snake">Multiplayer Snake - Team Size: 2</h3>
+
+<p>
+    It's just like regular Snake but missing a grid, with massive multiplayer and teams.
+    One team doesn't fight against the other - they even help each other! 
+    Your true enemies are the members of your own team.
+    <br>
+    Ice had to avoid ice or it shatters. 
+    <br>
+    Fire has to avoid fire or it gets out of control.
+    <br><br>
+    As a ice player you can help the fire players by extinguishing their burning trails and give them space to move.
+    Fire can melt ice trails and healps the other team.
+    At the end only one player per team remains. They win the game!
+    <br><br>
+    The websocket implementation was done by <a href="https://github.com/DanShu93" class="link">Daniel</a> and all of the gameplay by me.
+</p>
+
+    <!-- Todo: Add Multiplayer Snake video -->
+<h3 id = "blobby">Blobby Party - Team Size: 5</h3>
+
+<p>
+    Blobby volley is a 2D game in which two players play volley ball against each other. 
+    But why stop there? We wanted to create a similar game and played it with about 20 people.
+    <br><br>
+    This time we tried to resolve some problems we had with Multiplayer Snake.
+    Players didn't know which was their character most of the time, even though each had it's own tint.
+    To solve that we gave the javascript-controller a random color as a background. 
+    This color was then send along other data to the game which gave the character the exact same color.
+    We also added two buttons to test how much is doable with our approach.
+    <br><br>
+    My main task was to use the input from the websocket and make the player characters controllable with it.
+    <!-- TODO: Add more content (work was interrupted here.) -->
+
+</p>
+
+    <!-- Todo: Add Blobby Party video (with the music!) -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>end.</p>
+
+    <div>
+        <p class="tool-head"><b>Credits and Tools used:</b></p>
+        <a href="https://github.com/DanShu93">
+            <p class="tool">Daniel (Websocket Server)</p>
+        </a>
+
+        <a href="https://github.com/floatinghotpot/socket.io-unity">
+                <p class="tool">Socket.IO</p>
+        </a>
+    </div>
+
+    <div>
+            <a href="https://github.com/RameshBettge/MultiplayerSnake">
+                <div class ="w3-container git-container" > 
+                    <p class="git" >View Repository<br><i class=git-subtext>(Snake)</i></p>
+                </div>
+            </a>
+        
+        
+            <a href="https://github.com/DanShu93/blobbyparty">
+                <div class ="w3-container git-container" > 
+                    <p class="git" >View Repository<br><i class=git-subtext>(Blobby Party)</i></p>
+                </div>
+            </a>
+        </div>
+</p>
