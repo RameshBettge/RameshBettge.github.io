@@ -1,0 +1,181 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+html {
+    overflow-y: scroll; 
+}
+
+p
+{
+  font-size:16px;
+}
+
+a
+{
+  text-decoration:none;
+}
+
+.myImg
+{
+  width:50%; 
+  height:50%;
+
+  margin-left:25%;
+  margin-right:25%;
+
+  margin-top:42px;
+  margin-bottom:42px;
+}
+
+.proj-h1
+{
+  text-align:center;
+}
+.proj-sub1
+{
+  font-size: 65%;  
+  font-style:normal
+}
+.proj-sub2
+{
+  font-size: 55%;  
+  font-style:normal
+}
+
+.proj-tile
+{
+  margin-bottom: 14px;
+}
+
+.mar-top
+{
+  margin-top:32px;
+}
+.mar-bottom
+{
+  margin-bottom:32px;
+}
+
+/* for the links to the repositories. */
+.git
+{
+  color:white;
+  margin-top:10px; 
+  margin-bottom:10px; 
+  font-size: 26px; 
+  text-decoration: none; 
+  min-height:30px;
+}
+.git-container
+{
+  margin-top:42px;
+  margin-left:30%;
+  margin-right:30%;
+  text-align:center;
+  background-color: teal; 
+}
+
+.git-subtext
+{
+  font-style:normal;
+  color:black;
+}
+
+/* for the 'tools' category at the bottom of a project. */
+.tool
+{
+  font-size: 18px;
+  color:#0000EE;
+}
+
+.tool-head
+{
+  color:black; 
+  margin-bottom: 12px; 
+  padding-top: 42px; 
+  font-size: 18px; 
+  
+}
+
+/* used to display the 'play' symbol on top of videos. */
+.overlays
+{
+    position:absolute;
+
+    z-index:300000;
+
+    pointer-events: none; 
+}
+
+.video
+{
+  margin-top:32px;
+  margin-bottom:32px;
+}
+
+.vid-play
+{
+  margin-top:42px;
+  font-size: 80px;
+  color: white;
+  text-shadow:  0 0 5px black;
+}
+.vid-play-small
+{
+  font-size: 80px;
+  color: white;
+  text-shadow:  0 0 5px black;
+}
+
+/* used to control the max height of the text in project grid.*/
+.limit-height{
+  max-height : 500px!important;
+  /* height: 300px!important; */
+  min-height: 0px!important;
+  box-sizing:unset!important;
+  size: 0px!important;
+  overflow:hidden!important;
+}
+
+.myArrow{
+  font-size:36px; padding-top:0px; padding-top:0px; padding-left: 50%; padding-right: 50%; padding-bottom:0px;
+}
+
+.nav{
+  font-size:18px;
+}
+.nav-img{
+  font-size:18px;
+}
+
+.sub-nav{
+  font-size:16px;
+}
+.sub-nav-img:after{
+  font-size:14px;
+  content: '\f0c8'
+}
+
+.sub2-nav{
+  font-size:14px;
+  margin-left:5%;
+  
+}
+/* assigned to sub-sub-nav, just  in case I want to add sth.*/
+.sub2-nav-img{
+  
+  /* font-size:12px;
+  content:'\f0c8';
+  opacity:0%; */
+}
+
+
+
+/*Note: Default user symbol: fa-user
+        Default mail symbol: fa-envelope
+
+        fa-user-friends - new version
+        fa-grin-alt : f581 - new version
+*/
+
+/* .fa classes determine the symbols of the categorys on the sidebar. the codes for the content can be found here: https://fontawesome.com/icons?d=gallery&m=free */
+.fa-play:before {content: "\f04b";}
