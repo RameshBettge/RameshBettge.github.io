@@ -68,6 +68,15 @@
         An average rotation is then calculated from the samples of the last frames.
         <br>
         The more frames are sample, the smoother the boat will be. If just a few samples are used, the boat will move more wildly and excitingly.
+
+        <div class="mar-top; mar-bottom"style="padding-left: 30%">
+            <div class="overlays"><i id="bouyancy_o" class="fa fa-fw fa-play vid-play"></i></div>
+            <video  
+                class="video" style="width:60%; height:60%;" id="bouyancy" 
+                onclick="TogglePlay('bouyancy');"  onplay="ShowPlay('bouyancy', false)" onpause="ShowPlay('bouyancy', true)" onended="ShowPlay('bouyancy', true); Reset('bouyancy')" 
+                type="video/x-webm" src="Media/RtR/Bouyancy.mp4">
+            </video>
+        </div>
         <!-- TODO: Add bouyancy video -->
     </p>
     <br>
