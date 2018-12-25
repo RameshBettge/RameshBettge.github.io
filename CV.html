@@ -76,20 +76,28 @@
     <!-- Note: unclear what the avatar in next line does. -->
     <!-- <a href="#"><img src="/w3Media/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
+    <div class="w3-container" style=" text-align: center">
+      <h1 style="margin-top:32px;"><b>My CV-Game</b></h1>
+      <p class="w3-bottombar" style="font-size: 22px;">
+          Please note that this build is from November and will be updated again in early 2019!
+        <br>
+        <br>
+      </p>
   </header>
-
+  
   <body>
-    <div class="webgl-content" >
-      <div id="gameContainer" style="width: 960px; height: 600px;"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Ramesh's CV-Game</div>
+      <br>
+    <div class="template-wrap clear" style="position:relative; margin-bottom: 700px; margin-top:320px">
+      <div class="webgl-content">
+        <div id="gameContainer" style="width: 960px; height: 600px;"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+          <!-- <div class="title">Ramesh's CV-Game</div> -->
+        </div>
       </div>
     </div>
-
-    <div class="w3-container w3-padding-large" style="margin-bottom:32px; margin-top:900px"> 
+    <div class="w3-container w3-padding-large" style="margin-bottom:32px;"> 
       <!-- Todo: Think about where to place contact section - not enough content for seperate page? -->
       <!-- <div class="w3-container w3-padding-large w3-grey"> -->
         <div id = "contact" class="w3-row-padding w3-center w3-padding-36" style="margin:0 -16px">
