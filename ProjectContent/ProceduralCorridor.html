@@ -1,41 +1,60 @@
-<h1>Procedural Corridor</h1>
-<h1 style="color:red">Not implemented!</h1>
+<h1 class="proj-h1" style="text-align:center">Procedural Corridor<br>
+    <i class="proj-sub1">September 2018</i>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>end.</p>
 
+<h3 id = "Overview">Overview</h3>
+<div class="mar-top; mar-bottom"style="padding-left: 20%">
+    <div class="overlays"><i id="CorridorShowcase_o" class="fa fa-fw fa-play vid-play"></i></div>
+    <video  
+        class="video" style="width:80%; height:80%;" id="CorridorShowcase" 
+        onclick="TogglePlay('CorridorShowcase');"  onplay="ShowPlay('CorridorShowcase', false)" onpause="ShowPlay('CorridorShowcase', true)" onended="ShowPlay('CorridorShowcase', true); Reset('CorridorShowcase')" 
+        type="video/x-webm" src="Media/ProceduralCorridor/ProceduralCorridorShowcase.mp4">
+    </video>
+</div>
+
+<h3 id = "WhyThisWasMade">Why this was made</h3>
+<p>
+    The Procedural Corridor is the result of my first experimentation with the Unreal Engine.
+    <br>
+    In school, we learned how to generate rooms for a dungeon. 
+    The one major thing missing was how to generate the corridors to connect these rooms.
+    <br>
+    How to generate the mesh for a corridor while only knowing where it ends and where it starts?
+    To solve that, I created this project.
 </p>
+<br>
+<br>
+
+<h3 id="WhatILearned">What I learned</h3>
+<p>
+        By making just one single feature, and no gameplay, I learned a lot.
+        Here are some examples:
+        <br>
+        <br>
+        - C++ syntax<br>
+        - Usage of .h and .cpp files<br>
+        - Usage of Pointers<br>
+        - Instantiation of Actors and Actor-Components<br>
+        - Custom Editor creation<br>
+        <br>
+        <br>
+        These one thing I'm most proud of, is one particular skill I improved:
+        <br>
+        <br>
+        <b>Problem Solving</b>
+        <br>
+        <br>
+        On multiple occassions I got really stuck. The problem was, that all of my friends and even my teacher had almost no experience with UE4 and C++.<br>
+        This meant that I had to find out about various little quirks of the Engine and Language all on my own.<br>
+        It was a bit frustrating some times but in the end it really helped me advance myself.
+</p>
+<br>
+<br>
+
+<div>
+    <a href="https://github.com/RameshBettge/UnrealProceduralCorridor">
+        <div class ="w3-container git-container" > 
+            <p class="git" >View Repository</p>
+        </div>
+    </a>
+</div>
