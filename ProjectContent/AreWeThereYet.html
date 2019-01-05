@@ -12,8 +12,14 @@
     If you fail, your carpet will be ruined!
     <br>
     <br>
-    <!-- TODO: Add Trailer -->
-    TRAILER IS UNDER DEVELOPMENT
+    <div class="mar-top; mar-bottom"style="padding-left: 30%">
+        <div class="overlays"><i id="trailer_o" class="fa fa-fw fa-play vid-play"></i></div>
+        <video  
+            class="video" style="width:60%; height:60%;" id="trailer" 
+            onclick="TogglePlay('trailer');"  onplay="ShowPlay('trailer', false)" onpause="ShowPlay('trailer', true)" onended="ShowPlay('trailer', true); Reset('trailer')" 
+            type="video/x-webm" src="Media/AWTY/AWTY_Trailer.mp4">
+        </video>
+    </div>
 </p>
     <br>
     <br>
@@ -70,11 +76,19 @@
 
     <!-- TODO: credit road texture -->
     <!-- TODO: add link to game at itch.io and to web build -->
+<p class="tool-head"><b>Tools used:</b></p>
+<p class="tool">Trailer Music: Marvin's Dance by Silent Partner</p>
 
-    <a href="https://bitbucket.org/gongfumaniac/are-we-there-yet/src/master/">
-        <div class ="w3-container git-container" > 
-            <p class="git" >View Repository<br></p>
-        </div>
-    </a>
+<a href="https://developer.vuforia.com/">
+        <p class="tool">Trailer Music</p>
+</a>
+<a href="http://texturelib.com/texture/?path=/Textures/road/road/road_road_0019">
+    <p class="tool">Base for Road Texture</p>
+</a>
+
+<a href="https://bitbucket.org/gongfumaniac/are-we-there-yet/src/master/">
+    <div class ="w3-container git-container" > 
+        <p class="git" >View Repository<br></p>
     </div>
+</a>
 </p>
