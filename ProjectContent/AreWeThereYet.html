@@ -39,9 +39,8 @@
         </video>
     </div>
 
-    In order to keep my ability to adjust the camera later, I made the spawn- and despawn-positions dependant on the view.
+    In order to retain my ability to adjust the camera later, I didn't hardcode the spawn- and despawn-positions, but made them dependant on the view.
     A car will always spawn right above the top end of the screen and despawn right below it.
-    <!-- To achieve this, I cast two rays from the camera and   -->
     By casting two rays from the camera, I determine where the screen ends and add a buffer to it, so the cars don't visibly plop in or out of existance.
 
     <img src="Media/AWTY/CamRaysWithMarkers.png" class="myImg center" style="margin-left:5%; width: 90%; height: 130%">
@@ -54,7 +53,7 @@
 <p>
     Initially, I wanted normal car controls, enabling the player to move in any direction on a 2D plane.
     <br>
-    This version is still present in the repository in the scene 'OldCar'.
+    This version is still present on the repository in the scene 'OldCar'.
 
     <div class="mar-top; mar-bottom"style="padding-left: 30%">
         <div class="overlays"><i id="former_o" class="fa fa-fw fa-play vid-play"></i></div>
@@ -68,14 +67,14 @@
     The weird cube sticking out of the back right tire is for visualizing the rotation of the wheels.
     <br>
     When I decided the game would play on a small highway, I quickly decided that this kind of movement was just not fitting.
-    It was a difficult decision, to redo almost all the controls, but restricting the player's controls much more comfortable to play.
+    It was a difficult decision to redo almost all the controls, but restricting the them made the game much more comfortable to play.
     Now the player can just turn a limited amount to either side and when nothing is pressed, the car will align itself with the road automatically.
 </p>
     <br>
 
 <h3 id = "Play">Play now!</h3>
 <p>
-    Are We There Yet can be played directly in the browser or on android.<br>
+    'Are We There Yet' can be played directly in the browser or on android.<br>
     Just <a class = "link" href ="https://ramicreates.itch.io/awty">visit me on itch.io</a>!
 </p>
 

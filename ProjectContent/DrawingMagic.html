@@ -13,10 +13,10 @@
 <h1 class="proj-h1" style="text-align:center">Drawing Magic<br>
     <i class="proj-sub1">Graduation Project, June 2018</i>
 
-<h3>Overview</h3>
+<h3 id="Overview">Overview</h3>
 
 <p> 
-    This project is my midterm exam and it has multiple things to offer. Much on the programming side but also a little bit of art.
+    This project is was midterm exam and it has multiple things to offer. Much on the programming side but also a little bit of art.
     There are two main aspects of the game. The first is an adorable blob which follows you around and might even prove useful.
 </p>
 <br>
@@ -35,7 +35,7 @@
 
 <p>
     The second aspect of the game is the ability to draw magic lines into the air. 
-    Currently that's all, but I have created an idea on how to use machine learning to recognize symbols which could be combined for powerful spells.
+    Currently that's all, but I have created a concept on how to use machine learning to recognize symbols which could be combined for powerful spells.
 </p>
 <div class="mar-top; mar-bottom"style="padding-left: 20%">
     <div class="overlays"><i id="drawVid_o" class="fa fa-fw fa-play vid-play"></i></div>
@@ -49,16 +49,16 @@
 <h3 id="blob">Blob Character</h3>
 
 <p>
-    When looking for a softbody script I found two free variants. One didn't look good and another slowed the school PCs to a halt. 
-    Knowing all too well that I could never create anything close to a simulation I just experimented with a custom approach.
-    Since my ideas developed while writing code it admittedly got a little messy, but the core idea is easy to explain:
+    When looking for a softbody script I found two free variants. One didn't look good and another slowed my PC to a halt. 
+    Knowing all too well that I could never create anything close to an accurate simulation, I experimented with a custom approach.
+    Since new ideas developed while writing code it admittedly got a little bit messy, but the core idea is easy to explain:
     <br><br>
-    The blob has a small sphere collider for actual physics and a trigger the exact size of its mesh, which registers intersections.
+    The blob has a small sphere collider for actual physics and another one the exact size of its mesh, which registers intersections without any physics interaction.
     For each intersection, the closest point to the blob's center is calculated. 
     Each point then pushes the vertices away in the direction of the collision normal. 
     The closer point and vertex are in normal direction, the stronger this squash effect is.
     Vertices are also pushed away perpendicular to the normal, which simultaneously creates a stretch effect.<br>
-    All this is used to calculate a velocity for each vertex. The further a vertex is away from its original position, the stronger it will be pushed back to it.
+    All this is used to calculate a velocity for each vertex. The further away a vertex is from its original position, the stronger it will be pushed back towards it.
     Imagine each vertex being a spring connected to the blob's center.
 
 </p>
@@ -73,7 +73,7 @@
 </div>
 
 <p>
-    After making the blob controllable I added some 'flavor' like giving it a tear shape when it is moving very fast or jumping. 
+    After making the blob controllable I added some 'flavor', like giving it a tear shape when it is moving very fast or jumping. 
     The eyes also behave differently depending on how fast the player moves, how far he turns, if he is squashed below an object etc.
 </p>
 
@@ -89,11 +89,13 @@
 <h3 id="pathfinding">Custom 'Pathfinding'</h3>
 
 <p>
-    Even after the movement controls were completed, the gameplay concept was pretty rough. It was supposed to be a platformer with gravity similar to Mario Galaxy. 
+    <!-- Even after the movement controls were completed, the gameplay concept was pretty rough. It was supposed to be a platformer with gravity similar to Mario Galaxy. 
     The blob would grow when eating things and shrink when being bitten by enemies. Eventually, he would be able to swallow the level and fall onto another planet.
-    Instead of implementing this, I had a completely different idea. In order to somehow recycle what I did so far, I made the blob an NPC and developed a simple 'pathfinder'.
+    Instead of implementing this, I decided I wanted to try out an entirely different idea.<br> -->
+    Even after the movement controls were completed, the gameplay concept was pretty rough. 
+    I got an idea which didn't fit the blob character, but didn't want to just discard hin, so I turned him into an NPC and developed a simple 'pathfinder' for him.
 <br><br>
-    Transforms marked with a gem symbol are saved in an array. Some of them are marked as key-points (here they are yellow). 
+    In the next video you can see small gem symbols. These are Transforms which are all saved in one array. The yellow ones are marked as 'key-points'. 
     The blob will always move to the key-point which is closest to the player (black capsule).
     He will not move directly to it, however, but always move from one point in the array to the next, until he has reached his destination.
 </p>
@@ -112,27 +114,30 @@
 <h3 id="draw">Drawing</h3>
 
 <p>
-    Actually learning spells by memorizing symbols and having the immersive experience of actually drawing them. 
-    Experiment with what you saw and create something completely new! 
+    My idea was to have the player actually learn spells by memorizing symbols and having the immersive experience of actually drawing them. 
+    It could be implemented using machine learning. Making the data easily accessible for an AI was a goal I realized.
     <br>
-    That was the goal of this project. It could be implemented with machine learning. 
-    The player can draw anything he or she wants and enjoy various colorful effects. 
-    An AI would be easily confused with the extras so it gets the output of another camera which gets just the core information.
+    The player can draw anything he or she wants and enjoy various colorful effects. An AI would be confused by all the flashy extras.
+    Instead, it can get the output of a secondary camera, which is just the core information it needs.
     <br><br>
     The first picture is what the player sees. Many moving objects, a Line Renderer component with a varying thickness, a color gradient, and a glow. <br>
-    On the other picture, there is just one thing: a Line Renderer with the exact same form as the one before but with maximum contrast and perfect for machine learning.
+    On the other picture, there is just one thing: a Line Renderer with the exact same form as the one above but with maximum contrast - perfect for machine learning.
 
 </p>
 <img src="Media/DrawingMagic/NormalCam.PNG" class="myImg" style="margin-bottom:0px">
 <img src="Media/DrawingMagic/NeuralCam.PNG" class="myImg" style="margin-top:20px">
 
 <p>
-    Due to time constraints of the exam (two weeks full time) and later the distraction through other topics, the mechanic was never implemented.
-    I expected this to happen but still wanted to see, how far I could get. In the end, I'm happy about the result.
+    After the project was through (we had two weeks of full time), I decided that machine learning was a too big topic to tackle next to everything we learned at school.
+    I expected this to happen but still wanted to see, how far I could get. In the end, I'm satisfied with the result.
     <br>
-    Maybe I will recreate this project in VR some day. On the next image, you can see how combining spells might work.
-    The big circle determines the element (fire), the top-right one the direction (forward) and the circle in the bottom-left the form (condensed).
-    A fireball would be created!
+    <br>
+    Maybe I will recreate this project in VR some day. 
+    Then I'd add a combining mechanic in which you can draw three symbols to creatively and intuitively create new spells!
+    <br>
+    On the image below, you can see how combining spells might work.
+    The big circle determines the element (fire), the top-right one sets the direction (forward) and the circle in the bottom-left the form (condensed).
+    A fireball will be created!
 </p>
 
 

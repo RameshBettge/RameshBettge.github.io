@@ -2,7 +2,7 @@
     <i class="proj-sub1">Graduation Project, December 2018</i><br><i class="proj-sub2">Team Size: 4</i>
 </h1>
 
-<h3 style="color:red">Trailer is under development.</h3>
+<h3 id="Trailer" style="color:red">Trailer is under development.</h3>
     <br>
     <br>
 
@@ -20,7 +20,7 @@
         <br><br>
         My main task was to make the VR Controls work. Since I had the most experience with Game Jams and Source Control, I also acted as a coordinator.
         <br>
-        All aspects of game development are interesting for me, so I influenced most aspects of our projects. The setting and part of the game-design came from me, for example.
+        All aspects of game development interest me, so I influenced most aspects of our projects. The setting and part of the game-design came from me, for example.
     </p>
 
     <br><br>
@@ -51,7 +51,7 @@
         <br>
         All interaction should feel intuitive and believable. Buckets are always gripped at the handle and pistols always point forwards, when picked up.
         <br> 
-        Other objects, like enemy skulls, will keep their orientation after gripped, so immersion is not destroyed when they suddenly face in another direction.
+        Other objects, like enemy skulls, will keep their orientation after gripped, because most players will expect this.
         <br>
         Except for the Teleportation, no action feels 'gamey'. Everything feels natural, to maximize immersion.
     </p>
@@ -68,13 +68,13 @@
         - Rotating the boats to make everything believable.<br>
         - Moving the boats towards the players' ship and boarding it.<br>
         <br>
-        What makes me the proudest is the rotation. 
+        What makes me the proudest is the boats' rotation. 
         <br>
         To create the it, I sampled the sea's height at four points (front, back, left right) and calculated a rotation from it.
         <br>
-        An average rotation is then calculated from the samples of the last frames.
+        An average rotation is then calculated from the samples of the last frames to avoid make to make it look smooth.
         <br>
-        The more frames are sample, the smoother the boat will be. If just a few samples are used, the boat will move more wildly and excitingly.
+        If a lot of frames are samples, the boat will look very stable. If just a few samples are used it will move more wildly and excitingly.
 
         <div class="mar-top; mar-bottom"style="padding-left: 30%">
             <div class="overlays"><i id="bouyancy_o" class="fa fa-fw fa-play vid-play"></i></div>
@@ -90,22 +90,20 @@
     <p>
         If arms or legs of the skeletons are shot, they will detach. The bones will then be thrown into the direction of the shot.
         <br>
-        Bones near to the impact will be thrown farther.
+        Bones near to the impact will be fly further.
         <br><br>
-        Every bone (except for hand bones, which are grouped together for performance) has a 'GrabbableObject' script, so they can be picked up.
+        Every bone (except for hand bones, which are grouped together for performance reasons) has a 'GrabbableObject' script, so they can be picked up.
         <br>
-        To give me the ability to easily change different attributes, like Rigidbody drag, or custom torque-calculation when thrown, I created an editor script.
+        To give me the ability to easily change different attributes, like Rigidbody drag or custom torque-calculation when thrown, I created an editor script.
         <br>
-        The editor script enables me to set parameters once and apply them to all bones.
+        The editor script enables me to set parameters once and apply them to all bones simultaneously.
     </p>
     <br>
     <h5><u>Shaders</u></h5>
     <p>
-        Five shaders: GhostBody, GhostAura, teleportation, Sail, Sea
-
         Shaders are a very fascinating topic to me.<br>
-        Luckily I found multiple reasons to work on them:
-
+        Luckily I found multiple reasons to work on them:<br>
+        <br>
         - Ghost (Body and Aura)<br>
         - Sail (fluttering in the wind)<br>
         - Sea (color depending on height)<br>
@@ -132,17 +130,20 @@
         Our game has two resources:<br>
         <br>
         - Buckets o' water<br>
-        - Puffer Fish, which are used as cannonballs.<br>
+        - Puffer Fish<br>
         <br>
         <!-- TODO: Remove this gameplay description as soon as a video is added. -->
         Puffer Fish occassionally jump on board.
+        The VR player can grab them and put them into a crate at the bottom of the main mast.
+        From there they get transferred to the PC Player which can shoot them out of the cannon to sink enemy boats.
+        <br>
+        <br>
         Buckets can be thrown on deck by the PC Player.
         <br>
-        Both resources can be picked up by the VR Player and then be put in a crate at the bottom of the main mast.
-        From there, they get transferred to the PC Player.
+        The VR Player can then grab the buckets and refill them at a water barrel.
+        Just like the Puffer Fish, they can be sent up the main mast again.
         <br>
-        Puffer Fish can be shot out of the cannon to sink enemy boats.
-        Buckets o' Water can be used to extinguish fires on board. 
+        The PC Player can used filled buckets to extinguish fires on deck.
         <br>
         Even though the controls for the PC player were written by Celina Wuschko, I implemented what happened after a bucket is thrown, the cannon is shot, or the sniper's trigger is pulled.
     </p>

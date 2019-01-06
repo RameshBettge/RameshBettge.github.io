@@ -2,7 +2,7 @@
     <i class="proj-sub1">August & September Berlin Minijams</i>
 </h1>
 
-<h3>Overview</h3>
+<h3 id="Overview">Overview</h3>
 
 <p>
     Two games made on two different GameJams but using the same websocket technology. 
@@ -13,7 +13,8 @@
     <a href="https://docs.docker.com/" class="link">Docker</a>, 
     a server written by my team member <a href="https://github.com/DanShu93" class="link">Daniel</a> years ago,
     and an old javascript-controller made this possible.<br>
-    The controller's data (id, Vector2, and dis/connection events) is stringified with JSON and send over the server to the Unity application.
+    The controller runs on the phone and its data (ID, Vector2, and dis/connection events) is stringified with JSON and send over the server.
+    It arrives at the Unity application which runs on a PC.
     This data is then destringified and processed.
 </p>
 
@@ -32,15 +33,15 @@
 </div>
 <p>
     It's just like regular Snake but missing a grid, with massive multiplayer and teams.
-    One team doesn't fight against the other - they even help each other! 
+    One team doesn't fight against the other - the opposite is the case! 
     Your true enemies are the members of your own team.
     <br>
-    Ice had to avoid ice or it shatters. 
+    Ice has to avoid ice or it shatters. 
     <br>
-    Fire has to avoid fire or it gets out of control.
+    Fire has to avoid fire or it gets out of control and burns out.
     <br><br>
-    As a ice player you can help the fire players by extinguishing their burning trails and give them space to move.
-    Fire can melt ice trails and healps the other team.
+    As an ice player you can help the fire players by extinguishing their burning trails and give them space to move.
+    Fire can melt ice trails which benefits the other team.
     At the end only one player per team remains. They win the game!
     <br><br>
     The websocket implementation was done by <a href="https://github.com/DanShu93" class="link">Daniel</a> and all of the gameplay by me.
@@ -59,7 +60,7 @@
 </div>
 
 <p>
-    Blobby volley was a 2D game in which two players play volley ball against each other. 
+    Blobby volley is a 2D game in which two players play volley ball against each other. 
     But why stop there? We wanted to create a similar game and played it with about 20 people.
     <br><br>
     This time we tried to resolve some problems we had with Multiplayer Snake.

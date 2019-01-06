@@ -4,12 +4,11 @@
 </h1>
 <br>
 
-<h3>Overview</h3>
+<h3 id="Overview">Overview</h3>
 
 <p>
     After two weeks of learning about shaders, this ended up being my favorite experiment.
-    It is a visual portal which shows a completely different area when active.
-    First I will show a few other shaders, and then explain, how the crystal works.
+    It is a visual portal which shows a complete different area when active.
 </p>
 <div class="mar-top; mar-bottom"style="padding-left: 10%">
     <div class="overlays"><i id="Crystal_o" class="fa fa-fw fa-play vid-play"></i></div>
@@ -26,11 +25,11 @@
 
 <p>
     After learning how to create simple lit and even simpler unlit shaders, I heard about the Z-Buffer.
-    My first idea was to use it in an unconventional way to create a portal effect. <br>
+    Then i got the idea to use it in an unconventional way to create a portal effect. <br>
     First I rendered the output of a secondary camera on the screen without writing to the Z-Buffer.<br>
-    Then geometry is rendered front-to-back as always. 
+    Then geometry is rendered front-to-back as usual and the crystal is part of that. 
     <br> 
-    The crystal is treated like normal geometry and also writes to the Z-Buffer, even if it is transparent.
+    The crystal writes to the Z-Buffer even when it is transparent.
     This basically leaves a gap in the actual geometry through which the other world can be seen.
 </p>
 
@@ -56,10 +55,10 @@
 <!-- Todo: shorten this section since it is supposed to just be an addition. -->
 <h3 id="flashlightPortal">Flashlight Portal</h3>
 <p>
-    Since the portal effect turned out pretty well, I decided to build a small game using this effect.
-    The player has a flashlight or lantern which casts light in a cone. Wherever the light hits, the portal effect should be displayed. <br>
+    Since the portal effect turned out pretty well, I thout about building a small game using this effect.
+    The player would have a flashlight or lantern which casts light in a cone. Wherever the light hits, the portal effect should be displayed. <br>
     The player should be able to walk through big portals and put objects through small ones.
-    To make this possible I wanted to procedurally generate meshes. Whenever the player sets down the flashlight the portals get active - a hitbox is generated.
+    To make this possible I wanted to procedurally generate meshes. Whenever the player sets down the flashlight, the portals get active - hitboxes are generated.
 </p>
 
 <div class="mar-top; mar-bottom"style="padding-left: 15%">
@@ -72,8 +71,8 @@
 </div>
 
 <p>
-    In the following video, you can see how that rays are cast in a cone shape and if they hit an object, a vertex is generated.
-    The vertices snap to edges if they are very close, but gaps still occur because normally more rays are used.
+    In the following video, you can see that rays are cast in a cone shape. If they hit an object, a vertex is generated.
+    The vertices snap to edges if they are very close. Big gaps occur in this video because I used less rays for demonstration purposes.
     Meshed are separated by object hit and by the hit-normal.
 </p>
 

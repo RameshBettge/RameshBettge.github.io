@@ -1,5 +1,4 @@
 
-
 <br>
 <h1 class="proj-h1" style="text-align:center">AR Traps<br>
     <i class="proj-sub1">October Berlin Minijam - </i><i class="proj-sub2">Team Size: 4</i>
@@ -7,7 +6,7 @@
 <br>
 
 
-<h3>Overview</h3>
+<h3 id="Overview">Overview</h3>
 <p>
     Get chopped by a swinging axe, hit by a rotating hammer or crushed between walls - without even having to leave your house!
     In AR Traps the player can pull out his phone and summon deadly traps right into his own home.
@@ -28,14 +27,15 @@
 
 <h3 id="howWeDidIt">How we did it</h3>
 <p>
-    When I was looking for a team that evening I was sure, I wanted to do something new. Luckily I met someone I worked with at the VRBLN Hackathon#2.
-    He had often worked with AR before, so it was his task to get the tracking and movement working. 
-    For that, we used Vuforia and a technique called 'extended tracking'. <br>
+    <!-- When I was looking for a team at the Berlin Minijam I was sure, I wanted to do something new. Luckily I met someone I worked with at the VRBLN Hackathon#2.
+    He had often worked with AR before, so it was his task to get the tracking and movement working.  -->
+    We used Vuforia and a technique called 'extended tracking'. <br>
     A piece of paper with a specific image on it is laid down on the floor and when the program recognizes it, it constructs the virtual world around it.
-    It then uses the environment for orientation which makes it possible to keep the virtual world's position even when moving and when the tracker is out of view.
+    The environment is then used for orientation, which makes it possible to keep the virtual world's position updated - even when moving and when the tracker is out of view.
     <br> <br>
     My task was to design and implement all of the traps. At first, our team had difficulties deciding on a concept. Therefore I tried to make my scripts as versatile as possible.
-    When we fully committed to a concept we had only a few hours left. Despite the time constraints we got at least three traps to work, each using a different script.
+    When we fully committed to a concept, we had only a few hours left. Despite the time constraints we fully implemented three traps, each utilizing a different script.
+    <br> <br>
     In the following video, you can see how well our game works. A phone is connected to a laptop which projects our game on the wall (right-hand side).
     At the start, I point the phone to the tracker, which is lying on the floor (barely visible here).
     Even though I made a mistake and had to stop abruptly the tracking still worked!
@@ -59,11 +59,10 @@
 <h3 id="additionalTraps">Additional Traps</h3>
 
 <p>
-    My most customizable script - PendulumMovem.cs - was only used for the crushing walls. 
+    My most customizable script - PendulumMove.cs - was only used for the crushing walls. 
     To prove that it can be used in different ways, I quickly created the following example traps.
-    The only thing I added is a shader to hide the blades (on the left). This way, they really can be used in AR. 
+    The only thing I added is a shader to hide the blades (on the left) so they could be used in AR. 
 
-    <!-- Todo: Exchange these placeholder videos with the actual content. -->
     <br>
     <div class="w3-row-padding w3-grey mar-top" style="padding-top:20px; padding-bottom:20px; margin-left:10%; margin-right: 10%; ">
 
