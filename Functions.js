@@ -58,7 +58,8 @@ function Reset(name)
 
 function PasteHTML(ContainerName ,FileName)
 {
-  var hidden = document.getElementById(ContainerName);
+  var hidden = document.getElementById("ProjectContainer");
+  hidden.style.display = "block";
   $('#ProjectText').load(FileName + '.html');
 }
 
