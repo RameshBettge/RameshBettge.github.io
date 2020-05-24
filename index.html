@@ -12,55 +12,21 @@
 <link rel="stylesheet" type="text/css" href="Styles.css">
 
 <head>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.5.1.min.js"></script>
-  <script type="text/javascript" src="Functions.js"></script>
+  <script>PasteHTML("SidebarContainer", "Sidebar")</script>
 </head>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px; ">
 
 <!-- Sidebar/menu -->
-<!-- Note: next line was replaced by the one after that because it animated incorrectly. -->
-<!-- <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br> -->
-  <nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:300px; overflow-x:hidden" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <!-- Note: Photo on sidebar -->
-    <img src="Media/RameshPhoto.jpg" style="width:60%;" class="w3-round"><br><br>
-    <h4><b>PORTFOLIO</b></h4>
-    <!-- <p class="w3-text-grey">Template by W3.CSS</p> -->
-  </div>
-  <div class="w3-bar-block">
-    <!-- Note: w3-text-teal changes the color of the text. It should be added to the class of the category which is currently selected. -->
-    <!-- Note: to jump to a specific point on the page use <a href= "#someId" [...]></a>. The id can be given to at least the header and a div -->
+<div id="SidebarContainer"></div>
 
-    <a href="#start" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal nav"><i class="fa fa-th-large fa-fw w3-margin-right nav-img"></i>PORTFOLIO</a> 
-    <div style="margin-left: 25px">
-      <div id="ProjectSubNavigation"></div>
-    </div>
-    
-    <!-- <a href="AboutMe.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding nav"><i class="fa fa-user fa-fw w3-margin-right nav-img"></i>ABOUT ME</a>  -->
-    <a href="CV.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding nav"><i class="fa fa-fw w3-margin-right fa-play nav-img"></i>CV GAME</a>
-
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding nav"><i class="fa fa-envelope fa-fw w3-margin-right nav-img"></i>CONTACT</a>
-  </div>
-  <!-- Twitter and LinkedIn links-->
-  <div class="w3-panel" style="font-size: 25px">
-    <a href="https://github.com/RameshBettge"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a href="https://twitter.com/RamiCreates"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/ramesh-bettge-736829162/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  </div>
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
   <header id="start">
+
 
     <!-- Under-Construction Warning -->
     <!-- <br>

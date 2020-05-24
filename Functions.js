@@ -56,6 +56,17 @@ function Reset(name)
 }
 
 
+function PasteHTML(ContainerName ,FileName)
+{
+  var hidden = document.getElementById(ContainerName);
+  // hidden.style.display = "block";
+
+
+  // var directory = 'ProjectContent/'
+
+  // Note: occassional error in firefox('XML-Verarbeitungsfehler: "Junk" nach Dokument-Element') may be caused by the following line.
+  $('#ProjectText').load(FileName + '.html');
+}
 
 // Switch project Content
 function DisplayProject(ProjectName)
