@@ -16,7 +16,7 @@
   <script type="text/javascript" src="Functions.js"></script>
 </head>
 
-<body class="w3-light-grey w3-content" style="max-width:1600px;" >
+<body class="w3-light-grey w3-content" style="max-width:1600px;" onload = "PasteHTML('ProjectContainer','Sidebar')">
 
 <!-- Sidebar/menu -->
 <div id="SidebarContainer"></div>
@@ -26,7 +26,7 @@
 <div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
-  <header id="start" onload = "PasteHTML('SidebarContainer','Sidebar')">
+  <header id="start">
 
 
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
@@ -46,7 +46,7 @@
         <span class="w3-margin-right">Filter:</span> 
         
         <!-- Note: next three lines have commented out sections because these display Media that aren't fitting this site visually. -->
-        <button onclick="SetAllFiltersActive('Art', 'Code');" id="AllButton" class="w3-button w3-black">ALL</button>
+        <button id="AllButton" onclick="SetAllFiltersActive('Art', 'Code');" class="w3-button w3-black">ALL</button>
         <button id="CodeButton" onclick="SetFilterActive('Code', 'Art');"  class="w3-button w3-white"> <i class="fa fa-child w3-margin-right"> </i>Only Programming</button>
         <button id="ArtButton" onclick="SetFilterActive('Art', 'Code');"  class="w3-button w3-white w3-hide-small"> <i class="fa fa-users w3-margin-right"></i>Only Art</button>
       </div>

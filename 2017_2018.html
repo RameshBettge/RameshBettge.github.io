@@ -43,9 +43,9 @@
         <span class="w3-margin-right">Filter:</span> 
         
         <!-- Note: next three lines have commented out sections because these display Media that aren't fitting this site visually. -->
-        <button onclick="SetActiveFilter(0);" id="AllButton" class="w3-button w3-black">ALL</button>
-        <button id="SoloButton" onclick="SetActiveFilter(1);"  class="w3-button w3-white"> <i class="fa fa-child w3-margin-right"> </i>Only Solo</button>
-        <button id="TeamButton" onclick="SetActiveFilter(2);"  class="w3-button w3-white w3-hide-small"> <i class="fa fa-users w3-margin-right"></i>Only Team</button>
+        <button id="AllButton" onclick="SetAllFiltersActive('Solo', 'Team');"  class="w3-button w3-black">ALL</button>
+        <button id="SoloButton" onclick="SetFilterActive('Solo', 'Team');"  class="w3-button w3-white"> <i class="fa fa-child w3-margin-right"> </i>Only Solo</button>
+        <button id="TeamButton" onclick="SetFilterActive('Team', 'Solo');"  class="w3-button w3-white w3-hide-small"> <i class="fa fa-users w3-margin-right"></i>Only Team</button>
       </div>
     </div>
   </header>
