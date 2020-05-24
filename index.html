@@ -29,15 +29,6 @@
   <header id="start">
 
 
-    <!-- Under-Construction Warning -->
-    <!-- <br>
-    <div style="text-align: center" class="w3-container w3-black">
-      <br>
-      <h1 style="color:crimson"> <i class="fa fa-exclamation-triangle" style="color:white; margin-right:10%;"></i> Under Construction <i class="fa fa-bug" style="color:white; margin-left:10%"></i></h1>
-      <h2>Enjoy what is already here!</h2>
-      <br>
-    </div> -->
-
     <!-- Todo: Maybe add a button which hides/unhides less important projects (MaChick, Highway) -->
 
     <!-- Note: unclear what the avatar in next line does. -->
@@ -47,168 +38,30 @@
       <br>
       <br>
       <div style="text-align: center">
-        <h1><b>My Portfolio</b></h1>
+        <h1><b>Personal Work: 2019 & 2020</b></h1>
 
         <p style="font-size: 20px">
-          A selection of my best work. No variants of code shown in class or in tutorials - all personal content!
+          Projects I did on my own to practice old skills and learn new ones. <br>
+          Unfortunately, I cannot present my professional work here due to an NDA.
+
         </p>
       </div>
-      <div class="w3-section w3-bottombar w3-padding-16">
+      <!-- Solo/Team Filters diabled: Didn't do any team projects -->
+      <!-- <div class="w3-section w3-bottombar w3-padding-16">
         <span class="w3-margin-right">Filter:</span> 
         
-        <!-- Note: next three lines have commented out sections because these display Media that aren't fitting this site visually. -->
         <button onclick="SetActiveFilter(0);" id="AllButton" class="w3-button w3-black">ALL</button>
         <button id="SoloButton" onclick="SetActiveFilter(1);"  class="w3-button w3-white"> <i class="fa fa-child w3-margin-right"> </i>Only Solo</button>
         <button id="TeamButton" onclick="SetActiveFilter(2);"  class="w3-button w3-white w3-hide-small"> <i class="fa fa-users w3-margin-right"></i>Only Team</button>
-      </div>
+      </div> -->
     </div>
   </header>
   
+  <h1>THIS SITE IS CURRENTLY UNDER CONSTRUCTION</h1>
+
   <!-- Note: class="w3-third w3-container w3-margin-bottom" has a nice offset below every text but sometimes causes weird gaps in the -->
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
-  
-    <!-- OBSOLETE TEST -->
-  <!-- <div class="Team">
-    <div class="w3-third w3-container w3-margin-top proj-tile">
-      <a onclick="PasteHTML('ProjectContainer','Sidebar')" href = "#ProjectContainer">
-          <img src="Media/RtR/RtR thumb.png" alt="RipTheRibs" style="width:100%" class="w3-hover-opacity">
-      </a>
-      <div class="w3-container w3-teal">
-        <div class ="limit-height">
-          <p><b>Rip the Ribs VR</b></p>
-          <p>Asymmetric Multiplayer using one Oculus Rift. Defend your ship from skeleton pirates!</p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-    <div class="Team">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('RipTheRibs')" href = "#ProjectContainer">
-            <img src="Media/RtR/RtR thumb.png" alt="RipTheRibs" style="width:100%" class="w3-hover-opacity">
-        </a>
-        <div class="w3-container w3-teal">
-          <div class ="limit-height">
-            <p><b>Rip the Ribs VR</b></p>
-            <p>Asymmetric Multiplayer using one Oculus Rift. Defend your ship from skeleton pirates!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class = "Solo">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('AreWeThereYet')" href = "#ProjectContainer">
-          <img src="Media/AWTY/AWTY_Thumb.png" alt="AreWeThereYet?" style="width:100%" class="w3-hover-opacity">
-        </a>
-        <div class="w3-container w3-white">
-          <div class ="limit-height">
-            <p><b>Are we there yet?</b></p>
-            <p>Finally vacation! Travel across the highway as fast as you can and avoid crashes.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="Team">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('ARTraps')" href = "#ProjectContainer">
-            <img src="Media/ARTraps/Traps.png" alt="Traps" style="width:100%" class="w3-hover-opacity">
-        </a>
-        <div class="w3-container w3-white">
-          <div class ="limit-height">
-            <p><b>AR Traps</b></p>
-            <p>Did you ever want to transform your living-room into a moving death trap?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-      
-    <div class = "Solo">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('UnityShaders')" href = "#ProjectContainer">
-          <img src="Media/Shaders/CrystalThumb.PNG" alt="Crystal Shader" style="width:100%" class="w3-hover-opacity">
-        </a>
-        <div class="w3-container w3-white">
-          <div class ="limit-height">
-            <p><b>Portal Shader</b></p>
-            <p>A magic crystal grants a view into another world.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-      
-    <div class = "Solo">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('DrawingMagic')" href = "#ProjectContainer">
-          <img src="Media/DrawingMagic/DrawingMagicThumb.png" alt="Unreal Procedural" style="width:100%" class="w3-hover-opacity">
-        </a>
-        <div class="w3-container w3-white">
-          <div class ="limit-height">
-            <p><b>Drawing Magic</b></p>
-            <!-- Todo: Create better description -->
-            <p>My midterm Exam. Multiple mechanics and one cute, squishy companion.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="Team">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('WebsocketGames')" href = "#ProjectContainer">
-          <img src="Media/Websocketgames/PlungeBallLogo.png" alt="Websocket" style="width:100%" class="w3-hover-opacity">
-        </a>
-        <div class="w3-container w3-white">
-          <div class ="limit-height">
-            <p><b>Websocket Games</b></p>
-            <p>Retro games reimagined with unlimited local multiplayer! Just pull out your phone.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="Team">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('CVGame')" href = "#ProjectContainer">
-          <img src="Media/CV/CV_Thumb.png" alt="CV" style="width:100%" class="w3-hover-opacity" >
-        </a>
-        <div class="w3-container w3-white">
-          <div class ="limit-height">
-          <p><b>CV Game</b></p>
-          <p>The usual CV is boring? Well, this one is neatly packed into a character selection!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class = "Solo">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('ProceduralCorridor')" href = "#ProjectContainer">
-          <img src="Media/ProceduralCorridor/ProceduralCorridorThumb.PNG" alt="Unreal Procedural" style="width:100%" class="w3-hover-opacity">
-        </a>
-        <div class="w3-container w3-white">
-          <div class ="limit-height">
-            <p><b>Procedural Corridor</b></p>
-            <p>My first UE4 project. A Corridor can be generated and customized in the Editor.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class = "Solo">
-      <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('MaChick')" href = "#ProjectContainer">
-          <img src="Media/MaChick/MaChickThumbAlt.PNG" alt="MaChick" style="width:100%" class="w3-hover-opacity">
-        </a>
-        <div class="w3-container w3-white">
-          <div class ="limit-height">
-            <p><b>MaChick</b></p>
-            <p>A chicken uses her newfound magical powers to fight for freedom and emancipation.</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class = "Solo">
       <div class="w3-third w3-container w3-margin-top proj-tile">
@@ -217,8 +70,8 @@
         </a>
         <div class="w3-container w3-white">
           <div class ="limit-height">
-            <p><b>This Website</b></p>
-            <p>My first time using HTML, CSS and Javascript.</p>
+            <p><b>DEMO PROJECT</b></p>
+            <p>LOREM IPSUM</p>
           </div>
         </div>
       </div>
