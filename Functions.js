@@ -60,7 +60,7 @@ function PasteHTML(ContainerName ,FileName)
 {
   var hidden = document.getElementById("ProjectContainer");
   hidden.style.display = "block";
-  $('#SidebarContainer').load(FileName + '.html');
+  $('#' + ContainerName).load(FileName + '.html');
 }
 
 
@@ -114,8 +114,8 @@ function SetAllFiltersActive(filterCategory1, filterCategory2)
   var allButton = document.getElementById("AllButton")
   allButton.className = "w3-button w3-black";
 
-  var categoryButton1 = document.getElementById(activeFilterCategory + "Button");
-  var categoryButton2 = document.getElementById(inactiveFilterCategory + "Button");
+  var categoryButton1 = document.getElementById(filterCategory1 + "Button");
+  var categoryButton2 = document.getElementById(filterCategory2 + "Button");
 
   categoryButton1.className = "w3-button w3-white";
   categoryButton2.className = "w3-button w3-white";
