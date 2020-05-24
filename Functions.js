@@ -60,7 +60,7 @@ function PasteHTML(ContainerName ,FileName)
 {
   var hidden = document.getElementById("ProjectContainer");
   hidden.style.display = "block";
-  $('#ProjectText').load(FileName + '.html');
+  $('#SidebarContainer').load(FileName + '.html');
 }
 
 
