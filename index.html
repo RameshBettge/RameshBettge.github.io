@@ -46,9 +46,9 @@
         <span class="w3-margin-right">Filter:</span> 
         
         <!-- Note: next three lines have commented out sections because these display Media that aren't fitting this site visually. -->
-        <button onclick="SetActiveFilter(0);" id="AllButton" class="w3-button w3-black">ALL</button>
-        <button id="SoloButton" onclick="SetActiveFilter(1);"  class="w3-button w3-white"> <i class="fa fa-child w3-margin-right"> </i>Only Solo</button>
-        <button id="TeamButton" onclick="SetActiveFilter(2);"  class="w3-button w3-white w3-hide-small"> <i class="fa fa-users w3-margin-right"></i>Only Team</button>
+        <button onclick="SetAllFiltersActive('Art', 'Code');" id="AllButton" class="w3-button w3-black">ALL</button>
+        <button id="CodeButton" onclick="SetFilterActive('Code', 'Art');"  class="w3-button w3-white"> <i class="fa fa-child w3-margin-right"> </i>Only Programming</button>
+        <button id="ArtButton" onclick="SetFilterActive('Art', 'Code');"  class="w3-button w3-white w3-hide-small"> <i class="fa fa-users w3-margin-right"></i>Only Art</button>
       </div>
     </div>
   </header>
@@ -59,7 +59,7 @@
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
 
-    <div class = "Solo">
+    <div class = "Art">
       <div class="w3-third w3-container w3-margin-top proj-tile">
         <a onclick="DisplayProject('Environment_Desert')" href = "#ProjectContainer">
           <img src="Media/PlaceholderImage.png" alt="Environment_Desert" style="width:100%" class="w3-hover-opacity">
@@ -73,7 +73,7 @@
       </div>
     </div>
 
-    <div class = "Solo">
+    <div class = "Code">
       <div class="w3-third w3-container w3-margin-top proj-tile">
         <a onclick="DisplayProject('SpriteLighting')" href = "#ProjectContainer">
           <img src="Media/PlaceholderImage.png" alt="SpriteLighting" style="width:100%" class="w3-hover-opacity">
@@ -87,7 +87,7 @@
       </div>
     </div>
 
-    <div class = "Solo">
+    <div class = "Art">
       <div class="w3-third w3-container w3-margin-top proj-tile">
         <a onclick="DisplayProject('WeaponAssets')" href = "#ProjectContainer">
           <img src="Media/PlaceholderImage.png" alt="WeaponAssets" style="width:100%" class="w3-hover-opacity">
@@ -96,6 +96,20 @@
           <div class ="limit-height">
             <p><b>Weapon Assets</b></p>
             <p>Some Weapons I made to practice the complete asset production pipeline</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "Code">
+      <div class="w3-third w3-container w3-margin-top proj-tile">
+        <a onclick="DisplayProject('LightPortal')" href = "#ProjectContainer">
+          <img src="Media/PlaceholderImage.png" alt="LightPortal" style="width:100%" class="w3-hover-opacity">
+        </a>
+        <div class="w3-container w3-white">
+          <div class ="limit-height">
+            <p><b>Light Portal</b></p>
+            <p>A combination of a material and C++ code. Simulates a Light which shows another world.</p>
           </div>
         </div>
       </div>

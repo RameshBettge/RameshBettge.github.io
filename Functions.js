@@ -104,10 +104,50 @@ function GetHighestOverflow()
   }
 }
 
+function SetAllFiltersActive(filterCategory1, filterCategory2)
+{
+  // Apply Filters
+  SetFilterCategory(filterCategory1, true);
+  SetFilterCategory(filterCategory2, true);
+
+  // Tint the allButton black
+  var allButton = document.getElementById("AllButton")
+  allButton.className = "w3-button w3-black";
+
+  var categoryButton1 = document.getElementById(activeFilterCategory + "Button");
+  var categoryButton2 = document.getElementById(inactiveFilterCategory + "Button");
+
+  categoryButton1.className = "w3-button w3-white";
+  categoryButton2.className = "w3-button w3-white";
+}
+
+function SetFilterActive(activeFilterCategory, inactiveFilterCategory)
+{
+  // Apply Filters
+  SetFilterCategory(activeFilterCategory, true);
+  SetFilterCategory(inactiveFilterCategory, false);
+
+
+  // Tint activeFilterCategory button Black
+  var categoryButton = document.getElementById(activeFilterCategory + "Button");
+  categoryButton.className = "w3-button w3-black";
+  
+  var allButton = document.getElementById("AllButton");
+  var otherCategoryButton = document.getElementById(inactiveFilterCategory + "Button");
+  allButton.className = "w3-button w3-white";
+  categoryButton.className = "w3-button w3-white";
+}
+
+function SetFilterCategory(filterCategoryName, bVisible)
+{
+  var teams = document.getElementsByClassName(filterCategoryName);
+  ToggleVisibility(teams, bVisible);
+}
+
 // Filter
 function SetActiveFilter(buttonNumber)
 {
-  var allButton = document.getElementById("AllButton")
+  var allButton = document.getElementById("AllButton");
   var soloButton = document.getElementById("SoloButton");
   var teamButton = document.getElementById("TeamButton");
 
@@ -149,7 +189,6 @@ function SetTeam(bVisible)
 {
   var teams = document.getElementsByClassName("Team");
   ToggleVisibility(teams, bVisible);
-
 }
 
 function SetSolo(bVisible)
