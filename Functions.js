@@ -58,6 +58,9 @@ function Reset(name)
 
 function PasteHTML(ContainerName, FileName)
 {
+  console.log("pasting HTML.");
+  console.log(ContainerName + " - " + FileName);
+
   var hidden = document.getElementById(ContainerName);
   hidden.style.display = "block";
   $('#' + ContainerName).load(FileName + '.html');
