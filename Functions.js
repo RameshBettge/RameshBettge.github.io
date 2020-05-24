@@ -138,7 +138,7 @@ function SetFilterActive(activeFilterCategory, inactiveFilterCategory)
   var allButton = document.getElementById("AllButton");
   var otherCategoryButton = document.getElementById(inactiveFilterCategory + "Button");
   allButton.className = "w3-button w3-white";
-  categoryButton.className = "w3-button w3-white";
+  otherCategoryButton.className = "w3-button w3-white";
 }
 
 function SetFilterCategory(filterCategoryName, bVisible)
