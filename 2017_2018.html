@@ -16,7 +16,8 @@
   <script type="text/javascript" src="Functions.js"></script>
 </head>
 
-<body class="w3-light-grey w3-content" style="max-width:1600px;" onload = "PasteHTML('SidebarContainer','Sidebar')">
+<!-- Body's onload is used to load in extra content (Sidebar, Contacts)-->
+<body class="w3-light-grey w3-content" style="max-width:1600px;" onload = "PasteHTML('SidebarContainer','Sidebar'); PasteHTML('ContactContainer', 'Contact');">
 
 <!-- Sidebar/menu -->
 <div id="SidebarContainer"></div>
@@ -229,7 +230,7 @@
         </div>
         <div class="w3-third w3-teal">
           <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-          <p>12109 Berlin - Prühßstr. 77a</p>
+          <p>Berlin, Germany</p>
           </p>
         </div>
         <div class="w3-third w3-dark-grey">
