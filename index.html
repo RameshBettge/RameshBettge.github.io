@@ -11,12 +11,12 @@
 
 <link rel="stylesheet" type="text/css" href="Styles.css">
 
-<head>
+<head onload = "PasteHTML('ProjectContainer','Sidebar')">
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.5.1.min.js"></script>
   <script type="text/javascript" src="Functions.js"></script>
 </head>
 
-<body class="w3-light-grey w3-content" style="max-width:1600px;" onload = "PasteHTML('ProjectContainer','Sidebar')">
+<body class="w3-light-grey w3-content" style="max-width:1600px;" >
 
 <!-- Sidebar/menu -->
 <div id="SidebarContainer"></div>
@@ -29,10 +29,6 @@
   <header id="start">
 
 
-    <!-- Todo: Maybe add a button which hides/unhides less important projects (MaChick, Highway) -->
-
-    <!-- Note: unclear what the avatar in next line does. -->
-    <!-- <a href="#"><img src="/w3Media/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
       <br>
@@ -46,18 +42,18 @@
 
         </p>
       </div>
-      <!-- Solo/Team Filters diabled: Didn't do any team projects -->
-      <!-- <div class="w3-section w3-bottombar w3-padding-16">
+      <div class="w3-section w3-bottombar w3-padding-16">
         <span class="w3-margin-right">Filter:</span> 
         
+        <!-- Note: next three lines have commented out sections because these display Media that aren't fitting this site visually. -->
         <button onclick="SetActiveFilter(0);" id="AllButton" class="w3-button w3-black">ALL</button>
         <button id="SoloButton" onclick="SetActiveFilter(1);"  class="w3-button w3-white"> <i class="fa fa-child w3-margin-right"> </i>Only Solo</button>
         <button id="TeamButton" onclick="SetActiveFilter(2);"  class="w3-button w3-white w3-hide-small"> <i class="fa fa-users w3-margin-right"></i>Only Team</button>
-      </div> -->
+      </div>
     </div>
   </header>
   
-  <h1>THIS SITE IS CURRENTLY UNDER CONSTRUCTION</h1>
+  <p>THIS SITE IS CURRENTLY UNDER CONSTRUCTION</p>
 
   <!-- Note: class="w3-third w3-container w3-margin-bottom" has a nice offset below every text but sometimes causes weird gaps in the -->
   <!-- First Photo Grid-->
@@ -65,17 +61,47 @@
 
     <div class = "Solo">
       <div class="w3-third w3-container w3-margin-top proj-tile">
-        <a onclick="DisplayProject('PortfolioWebsite')" href = "#ProjectContainer">
-          <img src="Media/Website/WebsiteThumb_ALT.png" alt="PortfolioWebsite" style="width:100%" class="w3-hover-opacity">
+        <a onclick="DisplayProject('Environment_Desert')" href = "#ProjectContainer">
+          <img src="Media/PlaceholderImage.png" alt="Environment_Desert" style="width:100%" class="w3-hover-opacity">
         </a>
         <div class="w3-container w3-white">
           <div class ="limit-height">
-            <p><b>DEMO PROJECT</b></p>
-            <p>LOREM IPSUM</p>
+            <p><b>Desert Environment</b></p>
+            <p>An Envrionment made in a week in UE4</p>
           </div>
         </div>
       </div>
     </div>
+
+    <div class = "Solo">
+      <div class="w3-third w3-container w3-margin-top proj-tile">
+        <a onclick="DisplayProject('SpriteLighting')" href = "#ProjectContainer">
+          <img src="Media/PlaceholderImage.png" alt="SpriteLighting" style="width:100%" class="w3-hover-opacity">
+        </a>
+        <div class="w3-container w3-white">
+          <div class ="limit-height">
+            <p><b>Sprite Lighting</b></p>
+            <p>A custom Material which enables fake 3D lighting for Pixel Art</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "Solo">
+      <div class="w3-third w3-container w3-margin-top proj-tile">
+        <a onclick="DisplayProject('WeaponAssets')" href = "#ProjectContainer">
+          <img src="Media/PlaceholderImage.png" alt="WeaponAssets" style="width:100%" class="w3-hover-opacity">
+        </a>
+        <div class="w3-container w3-white">
+          <div class ="limit-height">
+            <p><b>Weapon Assets</b></p>
+            <p>Some Weapons I made to practice the complete asset production pipeline</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
 
