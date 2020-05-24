@@ -56,7 +56,7 @@ function Reset(name)
 }
 
 
-function PasteHTML(ContainerName ,FileName)
+function PasteHTML(ContainerName, FileName)
 {
   var hidden = document.getElementById("ProjectContainer");
   hidden.style.display = "block";

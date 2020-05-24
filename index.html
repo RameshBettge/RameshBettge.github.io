@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" type="text/css" href="Styles.css">
 
-<head onload = "PasteHTML('SidebarContainer','Sidebar')">
+<head>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.5.1.min.js"></script>
   <script type="text/javascript" src="Functions.js"></script>
 </head>
@@ -26,7 +26,7 @@
 <div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
-  <header id="start">
+  <header id="start" onload = "PasteHTML('SidebarContainer','Sidebar')">
 
 
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
@@ -38,7 +38,7 @@
 
         <p style="font-size: 20px">
           Projects I did on my own to practice old skills and learn new ones. <br>
-          Unfortunately, I cannot present my professional work here due to an NDA.
+          Unfortunately, I cannot present my professional work here due to a NDA.
 
         </p>
       </div>
