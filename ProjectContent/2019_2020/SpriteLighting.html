@@ -5,10 +5,10 @@
 <h3 id="Overview">Overview</h3>
 <p>
     The 3D Lighting effect basically cosists of three parts:<br>
-    - The Lighting on the Sprite
-    - Using the custom-, and the built-in 3D-Lighting synchronously
-    - Enabling the Sprite to receive Shadows from the built-in Lighting
-
+    - The Lighting on the Sprite<br>
+    - Using the custom-, and the built-in 3D-Lighting synchronously<br>
+    - Enabling the Sprite to receive Shadows from the built-in Lighting<br>
+    <br><br>
     To make the effect work, you just need to place a and any number of 'Sprite Light' Blueprints into a map. That's all.<br>
 
     <div class="w3-row-padding w3-grey mar-top" style="padding-top:20px; padding-bottom:20px; margin-left:10%; margin-right: 10%; ">
@@ -24,14 +24,12 @@
         <div class="w3-third w3-container">
             <img style="width:100%" src="Media/2019_2020/SpriteLighting/FireffliesAndShadows.gif">
 
-            <br>
-            <p>
-                left: Two moving Lights.  Middle: Sprite receiving shadows.  Right: Both effects at the same time
-
-            </p>
-    </div>
-
-
+        </div>
+        
+        
+        <p>
+            left: Two moving Lights.  Middle: Sprite receiving shadows.  Right: Both effects at the same time
+        </p>
 
 </div>
 
@@ -44,7 +42,7 @@
     The LightLookupWriter writes informations about the sprite lights into a texture. Afterwards, it gives the texture to a custom Material. <br>
     For example, this is how a texture could look like if two Sprite Lights are present in the Map:
 
-    <img src="Media/2019_2020/SpriteLighting/LightLookupTex.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
+    <img src="Media/2019_2020/SpriteLighting/LightLookupTex.png" class="myImg center" style="margin-left:25%; width: 30%; height: 30%">
 
     Each row stores data about a Sprite Light. <br>
     - Pixel 1 & 2 store the distance from the sprite to the lamp.<br>
@@ -57,7 +55,7 @@
     A value of 0 corresponds to a normal which faces directly forward.<br>
     The normals are transformed to world space before the dot product is calculated.
 
-    <img src="Media/2019_2020/SpriteLighting/Duck_Normals.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
+    <img src="Media/2019_2020/SpriteLighting/Duck_Normals.png" class="myImg center" style="margin-left:25%; width: 30%; height: 30%">
 
 </p>
 
