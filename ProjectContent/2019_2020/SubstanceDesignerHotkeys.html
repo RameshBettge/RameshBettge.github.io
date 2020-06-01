@@ -1,26 +1,73 @@
-<h1 class="proj-h1" style="text-align:center">Desert Environment<br>
+<h1 class="proj-h1" style="text-align:center">Substance Designer Hotkeys<br>
     <!-- <i class="proj-sub1">July 2018</i> -->
 </h1>
 
 <h3 id="Overview">Overview</h3>
 <p>
-    <b>UNDER CONSTRUCTION</b>
+    <img src="Media/2019_2020/WeaponAssets/Hotkeys.png" class="myImg center" style="margin-left:25%; width: 20%; height: 20%">
 
-    <img src="Media/PlaceholderImage.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
+    How long do you think it would take to recreate the node structure shown in the image above?<br>
+    Including the settings and the name of the Frame? <br>
+    If I already have the settings in mind, I need about 20 seconds. 
+    In the following video, I demonstrate my Hotkey Script whithout hurrying.
+
+
+    <div class="mar-top; mar-bottom"style="padding-left: 30%">
+        <div class="overlays"><i id="PreTrailer_o" class="fa fa-fw fa-play vid-play"></i></div>
+        <video  
+            class="video" style="width:75%; height:75%;" id="PreTrailer" 
+            onclick="TogglePlay('PreTrailer');"  onplay="ShowPlay('PreTrailer', false)" onpause="ShowPlay('PreTrailer', true)" onended="ShowPlay('PreTrailer', true); Reset('PreTrailer')" 
+            type="video/x-webm" src="Media/2019_2020/WeaponAssets/Hotkeys_Demonstration.mp4">
+        </video>
+    </div>
 </p>
     <br>
 
-<h3>HEADLINE</h3>
+<h3>Usage</h3>
 <p>
-    <b>UNDER CONSTRUCTION</b>
-    <br>
-    <img src="Media/PlaceholderImage.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
-    <img src="Media/PlaceholderImage.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
+    If you have Substance Designer open and are in the Graph View, you just need to press the left mouse button while holding a hotkey. 
+    Alternatively, you can also hold left Click and press the hotkey button. 
+    Many hotkeys have multiple uses, depending on whether or not modifying keys like shift are pressed.<br>
+    If you want a complete list of hotkeys, you can look into the script itself. In there, you will also find more detailed explanations.
+</p>
+
+<h3>Features</h3>
+<p>
+    Create Nodes without typing their names!
+    <br><br>
+    - Hold a hotkey and click anywhere to create a new Node.<br>
+    - Since Shift, Alt and Ctrl can be used, there is room for more hotkeys than you'll ever need.<br>
+    - Drag the pin of a Node and press a hotkey, to create a new Node. An automatic connection will be made.<br>
+    - Hold a hotkey and click on an existing connection. A Node will be connected in between.<br>
+    - A new hotkey can only be activated after the old one has been released - you will never accidentally create a Node twice.<br>
+    - The Script is only active if Substance Designer is the active Window.<br>
+    - Adding new hotkeys is very easy - even if you are not a programmer.<br> 
+    - Common Textures can be created by holding one key and typing a number (e.g.: c + 1 for Clouds 1).<br>
+
+</p>
+
+
+<h3>How it works - How to customize</h3>
+<p>
+    The core of the functionality is a single <a href = "https://www.autohotkey.com/">AutoHotkey</a> Script. 
+    AutoHotkey is a great scripting language for automating simple tasks in any programm. I used it to create Hotkeys which emulate more complex input from the keyboard.<br>
+    e.g.: h + LeftMouseButton -> Spacebar, 'Histogram Scan', Enter
+    <br><br>
+    To make creating more hotkeys easy and comfortable I created a function which takes a string as a parameter. The string contains multiple parameters which are separated by commas.
+    First comes the hotkey, followed by which Substance Designer Node should be created. After that come optional parameters which define what should happen, if the shift/alt/control keys are pressed.<br>
+    e.g.: NodeFunction("b, Blend, Blur HQ")<br>
+    -> If just b is pressed, a Blend node will be created. <br>
+    -> If shift and b are pressed at the same time, a Blur HQ Greyscale will be created.
+    -> If shift and b are pressed while a pin from a color node is dragged, a Blur HQ Color will be created.
+    <br><br>
+    To create your own shortcut, you simply have to open the script, navigate to the function in which all the calls to the NodeFunction are and create an additional call. One simple line of code is all you need.
 </p>
 
 
 
-<a href="">
+
+
+<a href="https://github.com/RameshBettge/AutoHotkey_GameDev">
     <div class ="w3-container git-container" > 
         <p class="git" >View Repository<br></p>
     </div>
