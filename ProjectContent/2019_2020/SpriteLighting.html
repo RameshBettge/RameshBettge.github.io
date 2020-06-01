@@ -26,12 +26,12 @@
 
         </div>
         
-        
+        <br>
         <p>
             left: Two moving Lights.  Middle: Sprite receiving shadows.  Right: Both effects at the same time
         </p>
 
-</div>
+    </div>
 
 </p>
     <br><br>
@@ -41,9 +41,10 @@
     The Sprites reference the lights on their own. Each Sprite has an instance of the LightLookupWriter class which I have written in C++.
     The LightLookupWriter writes informations about the sprite lights into a texture. Afterwards, it gives the texture to a custom Material. <br>
     For example, this is how a texture could look like if two Sprite Lights are present in the Map:
-
-    <img src="Media/2019_2020/SpriteLighting/LightLookupTex.png" class="myImg center" style="margin-left:25%; width: 30%; height: 30%">
-
+</p>
+<img src="Media/2019_2020/SpriteLighting/LightLookupTex.png" class="myImg center" style="margin-left:25%; width: 30%; height: 30%">
+    <br>
+<p>
     Each row stores data about a Sprite Light. <br>
     - Pixel 1 & 2 store the distance from the sprite to the lamp.<br>
     - Pixel 3 stores the Light's radius.<br>
@@ -56,7 +57,5 @@
     The normals are transformed to world space before the dot product is calculated.
 
     <img src="Media/2019_2020/SpriteLighting/Duck_Normals.png" class="myImg center" style="margin-left:25%; width: 30%; height: 30%">
-
-</p>
 
 </p>
