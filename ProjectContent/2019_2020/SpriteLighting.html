@@ -4,11 +4,12 @@
 
 <h3 id="Overview">Overview</h3>
 <p>
-    <b>UNDER CONSTRUCTION</b>
+    The 3D Lighting effect basically cosists of three parts:<br>
+    - The Lighting on the Sprite
+    - Using the custom-, and the built-in 3D-Lighting synchronously
+    - Enabling the Sprite to receive Shadows from the built-in Lighting
 
-    To make my system work, you just need to place a 'lit Sprite' Blueprint and any number of 'Sprite Light' Blueprints into a map.
-    
-
+    To make the effect work, you just need to place a and any number of 'Sprite Light' Blueprints into a map. That's all.<br>
 
     <div class="w3-row-padding w3-grey mar-top" style="padding-top:20px; padding-bottom:20px; margin-left:10%; margin-right: 10%; ">
 
@@ -23,6 +24,11 @@
         <div class="w3-third w3-container">
             <img style="width:100%" src="Media/2019_2020/SpriteLighting/FireffliesAndShadows.gif">
 
+            <br>
+            <p>
+                left: Two moving Lights.  Middle: Sprite receiving shadows.  Right: Both effects at the same time
+
+            </p>
     </div>
 
 
@@ -30,12 +36,10 @@
 </div>
 
 </p>
-    <br>
+    <br><br>
 
 <h3>How it works</h3>
 <p>
-    <b>UNDER CONSTRUCTION</b>
-    <br>
     The Sprites reference the lights on their own. Each Sprite has an instance of the LightLookupWriter class which I have written in C++.
     The LightLookupWriter writes informations about the sprite lights into a texture. Afterwards, it gives the texture to a custom Material. <br>
     For example, this is how a texture could look like if two Sprite Lights are present in the Map:
@@ -53,15 +57,8 @@
     A value of 0 corresponds to a normal which faces directly forward.<br>
     The normals are transformed to world space before the dot product is calculated.
 
+    <img src="Media/2019_2020/SpriteLighting/Duck_Normals.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
 
-    <img src="Media/2019_2020/SpriteLighting/DuckNormals.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
 </p>
 
-
-
-<a href="">
-    <div class ="w3-container git-container" > 
-        <p class="git" >View Repository<br></p>
-    </div>
-</a>
 </p>
