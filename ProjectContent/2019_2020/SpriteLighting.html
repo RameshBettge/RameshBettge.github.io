@@ -6,6 +6,10 @@
 <p>
     <b>UNDER CONSTRUCTION</b>
 
+    To make my system work, you just need to place a 'lit Sprite' Blueprint and any number of 'Sprite Light' Blueprints into a map.
+    
+
+
     <div class="w3-row-padding w3-grey mar-top" style="padding-top:20px; padding-bottom:20px; margin-left:10%; margin-right: 10%; ">
 
         <div class="w3-third w3-container">
@@ -13,22 +17,14 @@
         </div>
 
         <div class="w3-third w3-container">
-            <img style="width:100%" src="Media/2019_2020/SpriteLighting/ShadowPillars.gif">
+            <img style="width:100%" src="Media/2019_2020/SpriteLighting/Shadow_Pillars.gif">
         </div>
 
         <div class="w3-third w3-container">
-            <img style="width:100%" src="Media/2019_2020/SpriteLighting/FirefliesAndShadows.gif">
+            <img style="width:100%" src="Media/2019_2020/SpriteLighting/FireffliesAndShadows.gif">
 
     </div>
 
-
-    <img src="Media/2019_2020/SpriteLighting/Fireflies.gif" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
-    <img src="Media/2019_2020/SpriteLighting/ShadowPillars.gif" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
-    <img src="Media/2019_2020/SpriteLighting/FirefliesAndShadows.gif" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
-
-    <img src="Media/2019_2020/SpriteLighting/Thumbnail.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
-
-    <img src="Media/2019_2020/SpriteLighting/Thumbnail.png" alt="SpriteLighting" style="width:100%" class="w3-hover-opacity">
 
 
 </div>
@@ -36,12 +32,29 @@
 </p>
     <br>
 
-<h3>HEADLINE</h3>
+<h3>How it works</h3>
 <p>
     <b>UNDER CONSTRUCTION</b>
     <br>
-    <img src="Media/PlaceholderImage.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
-    <img src="Media/PlaceholderImage.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
+    The Sprites reference the lights on their own. Each Sprite has an instance of the LightLookupWriter class which I have written in C++.
+    The LightLookupWriter writes informations about the sprite lights into a texture. Afterwards, it gives the texture to a custom Material. <br>
+    For example, this is how a texture could look like if two Sprite Lights are present in the Map:
+
+    <img src="Media/2019_2020/SpriteLighting/LightLookupTex.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
+
+    Each row stores data about a Sprite Light. <br>
+    - Pixel 1 & 2 store the distance from the sprite to the lamp.<br>
+    - Pixel 3 stores the Light's radius.<br>
+    - Pixel 4 stores the Light's color. By lowering the color's value, the Light's intensity can also be controlled.
+    <br><br>
+    The custom Material then processes the given data. The most important step is to calculate the dot product of the given light direction and the sprite's normals.
+    The 'normals' are actually a handmade texture. The higher the red value, the further the normal points in x direction. <br>
+    A value of 0 corresponds to a normal of -1.<br>
+    A value of 0 corresponds to a normal which faces directly forward.<br>
+    The normals are transformed to world space before the dot product is calculated.
+
+
+    <img src="Media/2019_2020/SpriteLighting/DuckNormals.png" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
 </p>
 
 
