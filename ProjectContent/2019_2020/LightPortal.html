@@ -4,15 +4,42 @@
 
 <h3 id="Overview">Overview</h3>
 <p>
-    <b>UNDER CONSTRUCTION</b>
-
+    A light shines the way into another world. It reveals different versions of the same area, maybe even exposing new pathways inside walls which were solid before.
+    But watch out! The ground on which you stand might dissolve into a bottomless pit as well.
+    <br>
     <img src="Media/2019_2020/LightPortal/AlternateWorld.gif" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
+    <br>
+
+    In this test version, the default world is black Nothingness. The alternative world shows white walls. 
+    The green rectangles are the custom colliders which stop the light.
+    <br>
     <img src="Media/2019_2020/LightPortal/BlindLevel.gif" class="myImg center" style="margin-left:25%; width: 50%; height: 50%">
 </p>
     <br>
 
-<h3>HEADLINE</h3>
+<h3>Development</h3>
 <p>
+    In 2018 I created a Crystal Shader which visualizes an 'alternative World' (<a href="https://rameshbettge.github.io/Demo_Crystal.html")>Test it Right here!</a>).
+    Back then, I wanted to implement a magic flashlight. Wherever it's light hits, a portal into another world should be created.
+    Back in 2008 I created a prototype which I had to abandon due to the difficulty.<br>
+    About a year later I wanted to tackle the same Problem again, but with a slightly different concept. Since my skills have improved a lot in that time, I was able to create
+    this prototype. 
+</p>
+
+<h3>Further Plans</h3>
+<p>
+    The one problem I have with this prototype is, that it is utilizing a Translucent Shader.
+    Because of that, I cannot use normal- and roughness-maps.
+    <br>
+    The solution to that problem would be to actually use post processing - just like I did for the Crystal Shader in Unity. 
+    Since the new prototype was made in UE4, I would have to recreate the logic from scratch. That is why I haven't used Post Processing for this version so far. 
+    <br>
+    <br>
+    If I decide to make a game out of the prototype, it will be a puzzle game. Different kinds of light sources can be picked up and dropped on the floor. 
+    When the player places down a lantern which emits light in a cone shape, he/she has to be careful how to angle it.
+    If the lantern is placed directly facing a wall, it will only create a very small portal.
+    If the lantern is placed almost perpendicular to the wall however, the portal will be considerably bigger.
+    This creates a lot of possibilities for different puzzles.
 </p>
 
 
