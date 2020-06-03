@@ -4,12 +4,7 @@
 
 <h3 id="Overview">Overview</h3>
 <p>
-    The 3D Lighting effect basically cosists of three parts:<br>
-    - The Lighting on the Sprite<br>
-    - Using the custom-, and the built-in 3D-Lighting synchronously<br>
-    - Enabling the Sprite to receive Shadows from the built-in Lighting<br>
-    <br><br>
-    To make the effect work, you just need to place a and any number of 'Sprite Light' Blueprints into a map. That's all.<br>
+    To make the 3D-Lightin effect work, you just need to place a and any number of 'Sprite Light' Blueprints into a map. That's all.<br>
 
     <div class="w3-row-padding w3-grey mar-top" style="padding-top:20px; padding-bottom:20px; margin-left:10%; margin-right: 10%; ">
 
@@ -51,10 +46,11 @@
     - Pixel 4 stores the Light's color. By lowering the color's value, the Light's intensity can also be controlled.
     <br><br>
     The custom Material then processes the given data. The most important step is to calculate the dot product of the given light direction and the sprite's normals.
-    The 'normals' are actually a handmade texture. The higher the red value, the further the normal points in x direction. <br>
+    The 'normals' are actually a handmade texture. The higher the red value, the further the normal points in x direction. The higher the green value, the the bigger is the normal's y value.<br>
+    A value of 1 corresponds to a normal of 1.<br>
     A value of 0 corresponds to a normal of -1.<br>
     A value of 0 corresponds to a normal which faces directly forward.<br>
-    The normals are transformed to world space before the dot product is calculated.
+    The normals are transformed into world space before the dot product is calculated.
 
     <img src="Media/2019_2020/SpriteLighting/Duck_Normals.png" class="myImg center" style="margin-left:25%; width: 30%; height: 30%">
 
