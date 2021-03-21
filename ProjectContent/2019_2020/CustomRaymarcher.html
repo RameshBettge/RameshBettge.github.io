@@ -4,15 +4,43 @@
 
 <h3 id="Overview">Overview</h3>
 <p>
+    A Raymarcher built completely from scratch inside UE4.
 
+
+    Mandelbulb Fractal:
     <div class="mar-top; mar-bottom"style="padding-left: 10%">
-        <div class="overlays"><i id="HotkeyDemo_o" class="fa fa-fw fa-play vid-play"></i></div>
+        <div class="overlays"><i id="MandelbulbDemo_o" class="fa fa-fw fa-play vid-play"></i></div>
         <video  
-            class="video" style="width:80%; height:80%;" id="HotkeyDemo" 
-            onclick="TogglePlay('HotkeyDemo');"  onplay="ShowPlay('HotkeyDemo', false)" onpause="ShowPlay('HotkeyDemo', true)" onended="ShowPlay('HotkeyDemo', true); Reset('HotkeyDemo')" 
+            class="video" style="width:80%; height:80%;" id="MandelbulbDemo" 
+            onclick="TogglePlay('MandelbulbDemo');"  onplay="ShowPlay('MandelbulbDemo', false)" onpause="ShowPlay('MandelbulbDemo', true)" onended="ShowPlay('MandelbulbDemo', true); Reset('MandelbulbDemo')" 
             type="video/x-webm" src="Media/2019_2020/CustomRaymarcher/Mandelbulb.mp4">
         </video>
     </div>
+
+    Raymarching Demo:
+    <div class="mar-top; mar-bottom"style="padding-left: 10%">
+        <div class="overlays"><i id="RaymarchingDemo_o" class="fa fa-fw fa-play vid-play"></i></div>
+        <video  
+            class="video" style="width:80%; height:80%;" id="RaymarchingDemo" 
+            onclick="TogglePlay('RaymarchingDemo');"  onplay="ShowPlay('RaymarchingDemo', false)" onpause="ShowPlay('RaymarchingDemo', true)" onended="ShowPlay('RaymarchingDemo', true); Reset('RaymarchingDemo')" 
+            type="video/x-webm" src="Media/2019_2020/CustomRaymarcher/RaymarcherDemo.mp4">
+        </video>
+    </div>
+
+    Features:<br>
+    - Occlusion culling with default meshes<br>
+    - Add custom objects simply by placing them in the scene (no additional code required)<br>
+    - Write any UE4 HLSL code inside editor and see the result in the scene almost immediately<br>
+    - Works with any number of objects<br>
+    - Various modes similar to realtime boolean operations (Additive, Subtractive, Union)<br>
+    <br>
+    - Materials are created seperately and can be assigned to individual objects in the editor<br>
+    - Sphere- and triplanar-mapping<br>
+    <br>
+    - Everything is inside a plugin. Additing it to a new project is very simple.<br>
+
+
+    <img style="width:100%" src="Media/2019_2020/CustomRaymarcher/BooleanShader.gif">
 </p>
     <br>
 
